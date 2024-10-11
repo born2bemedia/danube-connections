@@ -1,4 +1,5 @@
 import HomeHero from "./_components/HomeHero";
+import HomeReach from "./_components/HomeReach";
 import HomeText from "./_components/HomeText";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <HomeHero />
       <HomeText />
+      <HomeReach />
     </>
   );
 }

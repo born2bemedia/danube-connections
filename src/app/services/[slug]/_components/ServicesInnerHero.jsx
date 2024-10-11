@@ -4,12 +4,12 @@ import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const ServicesHero = () => {
+const ServicesInnerHero = ({ title, description }) => {
   return (
-    <section className="services-hero">
+    <section className="services-inner-hero">
       <div className="_container">
         <div
-          className="services-hero__body"
+          className="services-inner-hero__body"
           style={{ fontFamily: "var(--font-lato)" }}
         >
           <div>
@@ -19,28 +19,15 @@ const ServicesHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
               style={{ fontFamily: "var(--font-manrope)" }}
-            >
-              Solutions
-            </motion.h1>
-            <motion.h2
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              style={{ fontFamily: "var(--font-manrope)" }}
-            >
-              to Grow Your <br />
-              Business
-            </motion.h2>
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
             <motion.p
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              Targeted services that connect you with suppliers, <br />
-              customers, talent, and investment opportunities to <br />
-              help your business expand and succeed globally.
+              {description}
             </motion.p>
             <div className="circle">
               <img src="/images/services/circle.svg" />
@@ -55,8 +42,8 @@ const ServicesHero = () => {
           >
             <Image
               src="/images/services/service1.png"
-              width={490}
-              height={420}
+              width={480}
+              height={480}
             />
             <Image
               src="/images/services/sphere1.png"
@@ -66,9 +53,14 @@ const ServicesHero = () => {
           </motion.div>
         </div>
       </div>
-      <Image className="hero-mob" src="/images/services/heroMob.png" width={490} height={420} />
+      <Image
+        className="hero-mob"
+        src="/images/services/innerMob.png"
+        width={490}
+        height={420}
+      />
     </section>
   );
 };
 
-export default ServicesHero;
+export default ServicesInnerHero;

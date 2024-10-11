@@ -4,7 +4,7 @@ import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ExploreIcon from "@/icons/ExploreIcon";
-import services from "@/lib/services";
+import services from "@/lib/services/services";
 
 const ServicesLoop = () => {
   return (
@@ -48,10 +48,15 @@ const ServicesLoop = () => {
                     <p>{service.objective}</p>
                   </div>
                 </div>
-                <Link href={`/${service.pageLink}`}>
+                <Link href={`/services/${service.pageLink}`}>
                   <span>Explore</span>
                   <ExploreIcon />
                 </Link>
+                <img
+                  className="mob-image"
+                  src={`/images/services/${service.pageLink}__mob.png`}
+                  alt={service.title}
+                />
               </div>
             </motion.div>
           ))}

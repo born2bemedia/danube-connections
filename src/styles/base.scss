@@ -105,7 +105,7 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #E6F355;
+    background-color: #e6f355;
     border-radius: 100px;
   }
   &.no-scroll {
@@ -122,7 +122,7 @@ body {
 ._container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 15px;
 }
 
 .container {
@@ -653,8 +653,8 @@ body {
               display: none;
             }
 
-            &::before { 
-              content: 'Attach files (optional)';
+            &::before {
+              content: "Attach files (optional)";
               position: absolute;
               top: 50%;
               transform: translate(0, -50%);
@@ -665,8 +665,8 @@ body {
               font-family: "Urbanist", sans-serif;
             }
 
-            &::after { 
-              content: 'Upload';
+            &::after {
+              content: "Upload";
               position: absolute;
               top: 0;
               right: 0;
@@ -687,7 +687,7 @@ body {
             }
           }
           &._active {
-            input[type="file"] { 
+            input[type="file"] {
               font-size: 16px;
               &::before {
                 display: none;
@@ -766,8 +766,8 @@ body {
               display: none;
             }
 
-            &::before { 
-              content: 'Your CV';
+            &::before {
+              content: "Your CV";
               position: absolute;
               top: 50%;
               transform: translate(0, -50%);
@@ -778,8 +778,8 @@ body {
               font-family: "Urbanist", sans-serif;
             }
 
-            &::after { 
-              content: 'Upload';
+            &::after {
+              content: "Upload";
               position: absolute;
               top: 0;
               right: 0;
@@ -800,7 +800,7 @@ body {
             }
           }
           &._active {
-            input[type="file"] { 
+            input[type="file"] {
               font-size: 16px;
               &::before {
                 display: none;
@@ -813,14 +813,14 @@ body {
             }
           }
 
-          &._error { 
-            input { 
+          &._error {
+            input {
               border-color: #ff0000;
             }
           }
         }
 
-        ._remove { 
+        ._remove {
           display: none;
         }
       }
@@ -857,10 +857,10 @@ body {
 }
 
 .parallax-custom {
-  .react-parallax-bgimage { 
+  .react-parallax-bgimage {
     height: 100% !important;
 
-    @media(max-width: 767px) { 
+    @media (max-width: 767px) {
       width: 100% !important;
       object-fit: cover !important;
     }
@@ -868,8 +868,18 @@ body {
 }
 
 .react-parallax {
-  .react-parallax-bgimage { 
+  .react-parallax-bgimage {
     width: 100% !important;
     object-fit: cover;
+  }
+}
+
+@keyframes bounce-custom {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }

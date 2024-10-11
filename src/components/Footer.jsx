@@ -3,7 +3,6 @@ import React from "react";
 import "@/styles/footer.scss";
 import "@/styles/base.scss";
 import Link from "next/link";
-import X from "@/icons/social/X";
 import Email from "@/icons/other/Email";
 import Phone from "@/icons/other/Phone";
 import Address from "@/icons/other/Address";

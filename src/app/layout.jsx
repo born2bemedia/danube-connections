@@ -12,9 +12,9 @@ import ServicePopup from "@/components/ServicePopup"; */
 
 
 /* const dmsans = DM_Sans({ subsets: ["latin"] }); */
-const dmsans = DM_Sans({ subsets: ["latin"] });
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
-const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const dmsans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const lato = Lato({ subsets: ["latin"], weight: ["100", "300", "400", "700", "900"] });
+const manrope = Manrope({ subsets: ["latin"], weight: ["200", "300", "400", "500", "600", "700", "800"] });
 
 export default function RootLayout({ children }) {
   return (

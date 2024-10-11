@@ -1,5 +1,44 @@
 @import "mixin";
 
 .header { 
-  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #828282;
+    padding: 19px 0 27px 0;
+    z-index: 999;
+    @media(max-width: 767px) { 
+        padding: 20px 0;
+        border-bottom: none;
+    }
+    &__container { 
+
+    }
+
+    &__body { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    &__logo { 
+        @include adaptiv-value('font-size', 38, 24, 1);
+        font-weight: 600;
+        color: #fff;
+    }
+
+    &__col-01 { 
+
+
+    }
+
+    &__col-02 { 
+        
+    }
+
+    &__btn-menu { 
+        cursor: pointer;
+    }
 }

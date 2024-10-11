@@ -54,7 +54,7 @@ const ServicesHero = () => {
             variants={fadeInUp}
           >
             <Image
-              src="/images/services/service1.png"
+              src="/images/services/servicesHero.png"
               width={490}
               height={420}
             />

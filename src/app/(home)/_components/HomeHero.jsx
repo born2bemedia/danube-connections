@@ -62,7 +62,7 @@ const HomeHero = () => {
                     </div>
                     <div className="home-hero__col-02">
                         <img src="/images/home/home-img-01.png" alt="image" className="img-01" />
-                        <img src="/images/home/home-img-02.png" alt="image" className="img-02" />
+                        {/* <img src="/images/home/home-img-02.png" alt="image" className="img-02" /> */}
 
                         <img src="/images/home/home-float-01.png" alt="icon" className="img-float-01" />
                         <img src="/images/home/home-float-02.png" alt="icon" className="img-float-02" />

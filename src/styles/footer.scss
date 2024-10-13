@@ -205,6 +205,12 @@
         &:hover { 
             color: #E6F355;
         }
+
+        @media(max-width: 767px) { 
+            br { 
+                display: none;
+            }
+        }
     }
 
     &__col-01 { 

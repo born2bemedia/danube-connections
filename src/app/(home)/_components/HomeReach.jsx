@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "@/styles/home/home.scss";
-import { fadeInUp } from "@/utils/animations";
-import { fadeInDown } from "@/utils/animations";
+import { fadeInUp, fadeInDown } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -34,7 +33,7 @@ const HomeReach = () => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
-                            custom={0.2}
+                            custom={0.3}
                             className="img-02">
                             <img src="/images/home/home-reach-02.png" alt="image" />
                         </motion.div>

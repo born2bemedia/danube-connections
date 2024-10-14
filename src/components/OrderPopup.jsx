@@ -53,7 +53,7 @@ function OrderPopup() {
   ) => {
     const valuesWithService = {
       ...values,
-      service: `${currentService} Request`,
+      serviceVal: `${currentService} Request`,
     };
 
     console.log("Form values being submitted: ", valuesWithService);

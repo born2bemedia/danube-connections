@@ -9,8 +9,12 @@ import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import CheckboxIcon from "@/icons/CheckboxIcon";
 
-function JobPopup() {
-  const { jobPopupDisplay, setJobPopupDisplay, currentService } = usePopup();
+function ConsultationPopup() {
+  const {
+    consultationPopupDisplay,
+    setConsultationPopupDisplay,
+    currentService,
+  } = usePopup();
   const countryCode = useCountryCode();
 
   const validationSchema = Yup.object({
@@ -20,9 +24,10 @@ function JobPopup() {
       .email("Please provide a valid email address.")
       .required("This field is required."),
     phone: Yup.string().required("This field is required."),
-    skills: Yup.string().required("This field is required."),
-    letter: Yup.string().required("This field is required."),
-    position: Yup.string().required("This field is required."),
+    company: Yup.string().required("This field is required."),
+    industry: Yup.string().required("This field is required."),
+    website: Yup.string().required("This field is required."),
+    message: Yup.string().required("This field is required."),
     agreeToTerms: Yup.bool().oneOf([true], "This field is required."),
   });
 
@@ -31,15 +36,15 @@ function JobPopup() {
     lastName: "",
     email: "",
     phone: "",
-    skills: "",
-    letter: "",
-    position: "",
-    cv: null,
+    company: "",
+    industry: "",
+    website: "",
+    message: "",
     agreeToTerms: false,
   };
 
   const closePopup = (resetForm) => {
-    setJobPopupDisplay(false);
+    setConsultationPopupDisplay(false);
     if (resetForm) {
       resetForm();
     }
@@ -61,34 +66,12 @@ function JobPopup() {
     //setStatus({ success: true });
 
     try {
-      let cvData = null;
-      if (values.cv) {
-        cvData = await new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => {
-            const base64EncodedData = reader.result;
-            resolve({
-              base64: base64EncodedData.split(";base64,").pop(), // Get only the base64 part
-              filename: values.cv.name, // Get the filename
-              mimetype: values.cv.type, // Get the MIME type
-            });
-          };
-          reader.onerror = (error) => reject(error);
-          reader.readAsDataURL(values.cv);
-        });
-      }
-
-      const payload = {
-        ...values,
-        cv: cvData,
-      };
-
-      const response = await fetch("/api/emails/job", {
+      const response = await fetch("/api/emails/request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(valuesWithService),
       });
 
       if (response.ok) {
@@ -108,7 +91,11 @@ function JobPopup() {
   };
 
   return (
-    <div className={`request-popup-wrap ${jobPopupDisplay ? "opened" : ""}`}>
+    <div
+      className={`request-popup-wrap ${
+        consultationPopupDisplay ? "opened" : ""
+      }`}
+    >
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -121,7 +108,6 @@ function JobPopup() {
           errors,
           resetForm,
           setFieldValue,
-          values,
         }) => {
           const errorCount = Object.keys(errors).length;
           const errorMessage =
@@ -159,7 +145,9 @@ function JobPopup() {
                       </div>
                     ) : (
                       <>
-                        <h2 className="service-title">JOIN OUR TEAM</h2>
+                        <h2 className="service-title">
+                          {currentService} Request
+                        </h2>
 
                         <Form>
                           <Field
@@ -205,15 +193,17 @@ function JobPopup() {
 
                           <div>
                             <Field
-                              name="skills"
+                              name="company"
                               type="text"
-                              placeholder="Relevant Skills and Expertise"
+                              placeholder="Company"
                               className={
-                                touched.skills && errors.skills ? "invalid" : ""
+                                touched.company && errors.company
+                                  ? "invalid"
+                                  : ""
                               }
                             />
                             <ErrorMessage
-                              name="skills"
+                              name="company"
                               component="div"
                               className="error"
                             />
@@ -221,17 +211,17 @@ function JobPopup() {
 
                           <div>
                             <Field
-                              name="position"
+                              name="website"
                               type="text"
-                              placeholder="Position of Interest"
+                              placeholder="Website"
                               className={
-                                touched.position && errors.position
+                                touched.website && errors.website
                                   ? "invalid"
                                   : ""
                               }
                             />
                             <ErrorMessage
-                              name="position"
+                              name="website"
                               component="div"
                               className="error"
                             />
@@ -270,49 +260,38 @@ function JobPopup() {
 
                           <div>
                             <Field
-                              name="letter"
+                              name="industry"
                               type="text"
-                              placeholder="Cover Letter"
+                              placeholder="Industry"
                               className={
-                                touched.letter && errors.letter ? "invalid" : ""
+                                touched.industry && errors.industry
+                                  ? "invalid"
+                                  : ""
                               }
                             />
                             <ErrorMessage
-                              name="letter"
+                              name="industry"
                               component="div"
                               className="error"
                             />
                           </div>
 
-                          <div className="form-block">
-                            <div className="input-wrap file-wrap">
-                              <span
-                                className="upload-custom"
-                                onClick={() =>
-                                  document.getElementById("cv").click()
-                                }
-                              >
-                                <span>
-                                  {values.cv ? values.cv.name : "Attach CV"}
-                                </span>
-                                <div>
-                                  <img src="/images/upload.svg" /> Upload
-                                </div>
-                              </span>
-                              <input
-                                id="cv"
-                                name="cv"
-                                type="file"
-                                onChange={(event) => {
-                                  setFieldValue(
-                                    "cv",
-                                    event.currentTarget.files[0]
-                                  );
-                                }}
-                                style={{ display: "none" }}
-                              />
-                              <ErrorMessage name="cv" component="span" />
-                            </div>
+                          <div>
+                            <Field
+                              name="message"
+                              type="text"
+                              placeholder="Your message"
+                              className={
+                                touched.message && errors.message
+                                  ? "invalid"
+                                  : ""
+                              }
+                            />
+                            <ErrorMessage
+                              name="message"
+                              component="div"
+                              className="error"
+                            />
                           </div>
 
                           <div className="full checkbox">
@@ -330,7 +309,7 @@ function JobPopup() {
                               <CheckboxIcon />
                               <span>
                                 I agree to the processing of my personal data
-                                for recruitment purposes and confirm that I have
+                                for business purposes and confirm that I have
                                 read and agree to the Terms of Use.
                               </span>
                             </label>
@@ -346,7 +325,7 @@ function JobPopup() {
                             className="bordered-button"
                             disabled={isSubmitting}
                           >
-                            Apply
+                            Submit Order
                           </button>
 
                           {errorMessage && (
@@ -368,4 +347,4 @@ function JobPopup() {
   );
 }
 
-export default JobPopup;
+export default ConsultationPopup;

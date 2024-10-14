@@ -67,7 +67,7 @@ export async function POST(request) {
         Skills: ${skills}
         Position: ${position}
         Cover Letter: ${letter}
-        Agree to Terms: ${agreeToTerms ? 'Yes' : 'No'}
+        Agree to Terms: ${agreeToTerms ? "Yes" : "No"}
       `,
       attachments: cv
         ? [
@@ -81,12 +81,48 @@ export async function POST(request) {
         : [],
     };
 
+    const mailOptionsClient = {
+      from: `"Danube Connections" <${process.env.EMAIL_USER}>`,
+      to: email,
+      subject: "We have received your request",
+      html: `
+        <table width="640" style="border-collapse: collapse; margin: 0 auto; font-style: sans-serif">
+          <thead>
+            <tr>
+              <td>
+                <img style="width: 100%" src="https://danubestrategic.com/images/email_header.png" />
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 40px">
+                <h2 style="text-align: left; font-size: 20px;color:#202020;">Dear ${firstName} ${lastName},</h2>
+                <p style="text-align: left; font-size: 16px;color:#202020;">Thank you for submitting your application to join our team. We have successfully received your details and will carefully review your qualifications and experience.</p>
+                <p style="text-align: left; font-size: 16px;color:#202020;">You will receive a response from us, whether we have a suitable position available for you at this time or not. We appreciate your interest in our company and your patience as we complete the review process.</p>
+                <h2 style="text-align: left; font-size: 20px;color:#202020;"> Best regards,<br>Danube Connections</h2>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot >
+            <td style="padding: 24px 40px;background: #222222;background-size:cover;font-size: 20px;text-decoration: none;color: #ffffff;text-align: center;">
+              Thanks for using <a href="https://danubestrategic.com/" style="color: #fff;font-size: 20px;text-decoration: none;color: #ffffff;">danubestrategic.com</a>
+            </td>
+          </tfoot>
+        </table>
+      `,
+    };
+
     // Send email
     await transporter.sendMail(mailOptionsRecipient);
+    await transporter.sendMail(mailOptionsClient);
     console.log("Email sent successfully.");
     return NextResponse.json({ message: "Success: email was sent" });
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE", error: error.message });
+    return NextResponse.status(500).json({
+      message: "COULD NOT SEND MESSAGE",
+      error: error.message,
+    });
   }
 }

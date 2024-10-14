@@ -12,12 +12,11 @@ export async function POST(request) {
       lastName,
       email,
       phone,
-      company,
-      industry,
-      website,
-      message,
+      skills,
+      letter,
+      position,
+      cv, // Expecting a base64 encoded file with metadata
       agreeToTerms,
-      serviceVal,
     } = bodyJSON;
 
     // OAuth2 Client Setup
@@ -25,7 +24,7 @@ export async function POST(request) {
     const oauth2Client = new OAuth2(
       process.env.EMAIL_CLIENT_ID, // Client ID
       process.env.EMAIL_CLIENT_SECRET, // Client Secret
-      "https://developers.google.com/oauthplayground" // Redirect URL (Google's OAuth2 Playground)
+      "https://developers.google.com/oauthplayground" // Redirect URL
     );
 
     oauth2Client.setCredentials({
@@ -55,30 +54,37 @@ export async function POST(request) {
       },
     });
 
-    // Email to the recipient (you)
+    // Prepare the email content with the CV attachment
     const mailOptionsRecipient = {
       from: `"Danube Connections" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
-      subject: "Order Form Submission",
+      subject: "Job Application Submission",
       text: `
-        Service: ${serviceVal}
         First Name: ${firstName}
         Last Name: ${lastName}
         Email: ${email}
         Phone: ${phone}
-        Company Name: ${company}
-        Industry: ${industry}
-        Website: ${website}
-        Message: ${message}
+        Skills: ${skills}
+        Position: ${position}
+        Cover Letter: ${letter}
         Agree to Terms: ${agreeToTerms ? "Yes" : "No"}
       `,
+      attachments: cv
+        ? [
+            {
+              filename: cv.filename,
+              content: cv.base64,
+              encoding: "base64",
+              contentType: cv.mimetype,
+            },
+          ]
+        : [],
     };
 
-    // Email to the client (confirmation email)
     const mailOptionsClient = {
       from: `"Danube Connections" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: "Danube Connections: Service Order Confirmation",
+      subject: "Danube Connections: Application Confirmation",
       html: `
         <table width="640" style="border-collapse: collapse; margin: 0 auto; font-style: sans-serif">
           <thead>
@@ -92,9 +98,8 @@ export async function POST(request) {
             <tr>
               <td style="padding: 40px">
                 <h2 style="text-align: left; font-size: 20px;color:#202020;">Dear ${firstName} ${lastName},</h2>
-                <p style="text-align: left; font-size: 16px;color:#202020;">Thank you for submitting your request for ${serviceVal}. We are pleased to inform you that your request has been received and is currently being processed.</p>
-                <p style="text-align: left; font-size: 16px;color:#202020;">Our team is reviewing the details and will reach out to you within the next 2 business days to discuss the next steps and address any further requirements.</p>
-                <p style="text-align: left; font-size: 16px;color:#202020;">If you have any additional questions in the meantime, please feel free to contact us at danubestrategic@gmail.com.</p>
+                <p style="text-align: left; font-size: 16px;color:#202020;">Thank you for submitting your application to join our team. We have successfully received your details and will carefully review your qualifications and experience.</p>
+                <p style="text-align: left; font-size: 16px;color:#202020;">You will receive a response from us, whether we have a suitable position available for you at this time or not. We appreciate your interest in our company and your patience as we complete the review process.</p>
                 <h2 style="text-align: left; font-size: 20px;color:#202020;"> Best regards,<br>Danube Connections</h2>
               </td>
             </tr>
@@ -108,14 +113,13 @@ export async function POST(request) {
       `,
     };
 
-    // Send emails
+    // Send email
     await transporter.sendMail(mailOptionsRecipient);
     await transporter.sendMail(mailOptionsClient);
-
-    console.log("Emails sent successfully.");
-    return NextResponse.json({ message: "Success: emails were sent" });
+    console.log("Email sent successfully.");
+    return NextResponse.json({ message: "Success: email was sent" });
   } catch (error) {
-    console.error("Error sending emails:", error);
+    console.error("Error sending email:", error);
     return NextResponse.status(500).json({
       message: "COULD NOT SEND MESSAGE",
       error: error.message,

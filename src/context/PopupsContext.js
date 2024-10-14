@@ -4,25 +4,25 @@ import React, { useState, createContext, useContext } from "react";
 const PopupsContext = createContext();
 
 export const PopupsProvider = ({ children }) => {
-  const [requestPopupDisplay, setRequestPopupDisplay] = useState(false);
+  const [jobPopupDisplay, setJobPopupDisplay] = useState(false);
   const [orderPopupDisplay, setOrderPopupDisplay] = useState(false);
-  const [thanksPopupDisplay, setThanksPopupDisplay] = useState(false);
-  const [servicePopupDisplay, setServicePopupDisplay] = useState(false);
+  const [consultationPopupDisplay, setConsultationPopupDisplay] = useState(false);
+  const [currentJob, setCurrentJob] = useState(false);
   const [currentService, setCurrentService] = useState(null);
 
   return (
     <PopupsContext.Provider
       value={{
-        requestPopupDisplay,
-        setRequestPopupDisplay,
+        jobPopupDisplay,
+        setJobPopupDisplay,
         orderPopupDisplay,
         setOrderPopupDisplay,
-        thanksPopupDisplay,
-        setThanksPopupDisplay,
-        servicePopupDisplay,
-        setServicePopupDisplay,
+        consultationPopupDisplay,
+        setConsultationPopupDisplay,
         currentService,
         setCurrentService,
+        currentJob,
+        setCurrentJob,
       }}
     >
       {children}

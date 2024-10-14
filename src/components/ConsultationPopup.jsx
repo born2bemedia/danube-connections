@@ -9,9 +9,12 @@ import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import CheckboxIcon from "@/icons/CheckboxIcon";
 
-function OrderPopup() {
-  const { orderPopupDisplay, setOrderPopupDisplay, currentService } =
-    usePopup();
+function ConsultationPopup() {
+  const {
+    consultationPopupDisplay,
+    setConsultationPopupDisplay,
+    currentService,
+  } = usePopup();
   const countryCode = useCountryCode();
 
   const validationSchema = Yup.object({
@@ -41,7 +44,7 @@ function OrderPopup() {
   };
 
   const closePopup = (resetForm) => {
-    setOrderPopupDisplay(false);
+    setConsultationPopupDisplay(false);
     if (resetForm) {
       resetForm();
     }
@@ -53,7 +56,7 @@ function OrderPopup() {
   ) => {
     const valuesWithService = {
       ...values,
-      serviceVal: `${currentService} Request`,
+      service: `${currentService} Request`,
     };
 
     console.log("Form values being submitted: ", valuesWithService);
@@ -63,7 +66,7 @@ function OrderPopup() {
     //setStatus({ success: true });
 
     try {
-      const response = await fetch("/api/emails/order", {
+      const response = await fetch("/api/emails/request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +91,11 @@ function OrderPopup() {
   };
 
   return (
-    <div className={`request-popup-wrap ${orderPopupDisplay ? "opened" : ""}`}>
+    <div
+      className={`request-popup-wrap ${
+        consultationPopupDisplay ? "opened" : ""
+      }`}
+    >
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -340,4 +347,4 @@ function OrderPopup() {
   );
 }
 
-export default OrderPopup;
+export default ConsultationPopup;

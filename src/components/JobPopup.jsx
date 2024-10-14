@@ -9,9 +9,8 @@ import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import CheckboxIcon from "@/icons/CheckboxIcon";
 
-function OrderPopup() {
-  const { orderPopupDisplay, setOrderPopupDisplay, currentService } =
-    usePopup();
+function JobPopup() {
+  const { jobPopupDisplay, setJobPopupDisplay, currentService } = usePopup();
   const countryCode = useCountryCode();
 
   const validationSchema = Yup.object({
@@ -21,10 +20,9 @@ function OrderPopup() {
       .email("Please provide a valid email address.")
       .required("This field is required."),
     phone: Yup.string().required("This field is required."),
-    company: Yup.string().required("This field is required."),
-    industry: Yup.string().required("This field is required."),
-    website: Yup.string().required("This field is required."),
-    message: Yup.string().required("This field is required."),
+    skills: Yup.string().required("This field is required."),
+    letter: Yup.string().required("This field is required."),
+    position: Yup.string().required("This field is required."),
     agreeToTerms: Yup.bool().oneOf([true], "This field is required."),
   });
 
@@ -33,15 +31,15 @@ function OrderPopup() {
     lastName: "",
     email: "",
     phone: "",
-    company: "",
-    industry: "",
-    website: "",
-    message: "",
+    skills: "",
+    letter: "",
+    position: "",
+    cv: null,
     agreeToTerms: false,
   };
 
   const closePopup = (resetForm) => {
-    setOrderPopupDisplay(false);
+    setJobPopupDisplay(false);
     if (resetForm) {
       resetForm();
     }
@@ -53,7 +51,7 @@ function OrderPopup() {
   ) => {
     const valuesWithService = {
       ...values,
-      serviceVal: `${currentService} Request`,
+      service: `${currentService} Request`,
     };
 
     console.log("Form values being submitted: ", valuesWithService);
@@ -63,12 +61,34 @@ function OrderPopup() {
     //setStatus({ success: true });
 
     try {
-      const response = await fetch("/api/emails/order", {
+      let cvData = null;
+      if (values.cv) {
+        cvData = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const base64EncodedData = reader.result;
+            resolve({
+              base64: base64EncodedData.split(";base64,").pop(), // Get only the base64 part
+              filename: values.cv.name, // Get the filename
+              mimetype: values.cv.type, // Get the MIME type
+            });
+          };
+          reader.onerror = (error) => reject(error);
+          reader.readAsDataURL(values.cv);
+        });
+      }
+
+      const payload = {
+        ...values,
+        cv: cvData,
+      };
+
+      const response = await fetch("/api/emails/job", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(valuesWithService),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
@@ -88,7 +108,7 @@ function OrderPopup() {
   };
 
   return (
-    <div className={`request-popup-wrap ${orderPopupDisplay ? "opened" : ""}`}>
+    <div className={`request-popup-wrap ${jobPopupDisplay ? "opened" : ""}`}>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -101,6 +121,7 @@ function OrderPopup() {
           errors,
           resetForm,
           setFieldValue,
+          values,
         }) => {
           const errorCount = Object.keys(errors).length;
           const errorMessage =
@@ -138,9 +159,7 @@ function OrderPopup() {
                       </div>
                     ) : (
                       <>
-                        <h2 className="service-title">
-                          {currentService} Request
-                        </h2>
+                        <h2 className="service-title">JOIN OUR TEAM</h2>
 
                         <Form>
                           <Field
@@ -186,17 +205,15 @@ function OrderPopup() {
 
                           <div>
                             <Field
-                              name="company"
+                              name="skills"
                               type="text"
-                              placeholder="Company"
+                              placeholder="Relevant Skills and Expertise"
                               className={
-                                touched.company && errors.company
-                                  ? "invalid"
-                                  : ""
+                                touched.skills && errors.skills ? "invalid" : ""
                               }
                             />
                             <ErrorMessage
-                              name="company"
+                              name="skills"
                               component="div"
                               className="error"
                             />
@@ -204,17 +221,17 @@ function OrderPopup() {
 
                           <div>
                             <Field
-                              name="website"
+                              name="position"
                               type="text"
-                              placeholder="Website"
+                              placeholder="Position of Interest"
                               className={
-                                touched.website && errors.website
+                                touched.position && errors.position
                                   ? "invalid"
                                   : ""
                               }
                             />
                             <ErrorMessage
-                              name="website"
+                              name="position"
                               component="div"
                               className="error"
                             />
@@ -253,38 +270,49 @@ function OrderPopup() {
 
                           <div>
                             <Field
-                              name="industry"
+                              name="letter"
                               type="text"
-                              placeholder="Industry"
+                              placeholder="Cover Letter"
                               className={
-                                touched.industry && errors.industry
-                                  ? "invalid"
-                                  : ""
+                                touched.letter && errors.letter ? "invalid" : ""
                               }
                             />
                             <ErrorMessage
-                              name="industry"
+                              name="letter"
                               component="div"
                               className="error"
                             />
                           </div>
 
-                          <div>
-                            <Field
-                              name="message"
-                              type="text"
-                              placeholder="Your message"
-                              className={
-                                touched.message && errors.message
-                                  ? "invalid"
-                                  : ""
-                              }
-                            />
-                            <ErrorMessage
-                              name="message"
-                              component="div"
-                              className="error"
-                            />
+                          <div className="form-block">
+                            <div className="input-wrap file-wrap">
+                              <span
+                                className="upload-custom"
+                                onClick={() =>
+                                  document.getElementById("cv").click()
+                                }
+                              >
+                                <span>
+                                  {values.cv ? values.cv.name : "Attach CV"}
+                                </span>
+                                <div>
+                                  <img src="/images/upload.svg" /> Upload
+                                </div>
+                              </span>
+                              <input
+                                id="cv"
+                                name="cv"
+                                type="file"
+                                onChange={(event) => {
+                                  setFieldValue(
+                                    "cv",
+                                    event.currentTarget.files[0]
+                                  );
+                                }}
+                                style={{ display: "none" }}
+                              />
+                              <ErrorMessage name="cv" component="span" />
+                            </div>
                           </div>
 
                           <div className="full checkbox">
@@ -302,7 +330,7 @@ function OrderPopup() {
                               <CheckboxIcon />
                               <span>
                                 I agree to the processing of my personal data
-                                for business purposes and confirm that I have
+                                for recruitment purposes and confirm that I have
                                 read and agree to the Terms of Use.
                               </span>
                             </label>
@@ -318,7 +346,7 @@ function OrderPopup() {
                             className="bordered-button"
                             disabled={isSubmitting}
                           >
-                            Submit Order
+                            Apply
                           </button>
 
                           {errorMessage && (
@@ -340,4 +368,4 @@ function OrderPopup() {
   );
 }
 
-export default OrderPopup;
+export default JobPopup;

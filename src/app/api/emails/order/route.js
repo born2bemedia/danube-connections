@@ -7,7 +7,7 @@ export async function POST(request) {
     const requestBody = await request.text();
     const bodyJSON = JSON.parse(requestBody);
 
-    const { firstName, lastName, email, phone, company, industry, website, message, agreeToTerms } = bodyJSON;
+    const { firstName, lastName, email, phone, company, industry, website, message, agreeToTerms, serviceVal } = bodyJSON;
 
     // OAuth2 Client Setup
     const OAuth2 = google.auth.OAuth2;
@@ -49,6 +49,7 @@ export async function POST(request) {
       to: process.env.EMAIL_USER,
       subject: "Order Form Submission",
       text: `
+        Service: ${serviceVal}
         First Name: ${firstName}
         Last Name: ${lastName}
         Email: ${email}

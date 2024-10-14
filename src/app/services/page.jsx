@@ -16,6 +16,18 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
+export const metadata = {
+  title: "Services | Danube Connections",
+  description:
+    "Explore our range of services at Danube Connections, including supply chain optimization, investment facilitation, talent acquisition, and customer introduction services designed to drive business success.",
+  openGraph: {
+    title: "Services | Danube Connections",
+    description:
+      "Explore our range of services at Danube Connections, including supply chain optimization, investment facilitation, talent acquisition, and customer introduction services designed to drive business success.",
+    //images: "/images/meta.png",
+  },
+};
+
 const Services = () => {
   return (
     <div className={`${lato.variable} ${manrope.variable}`}>

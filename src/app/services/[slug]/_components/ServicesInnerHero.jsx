@@ -4,7 +4,7 @@ import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const ServicesInnerHero = ({ title, description, backgroundImage, heroImage, classVar, spheres }) => {
+const ServicesInnerHero = ({ title, description, backgroundImage, heroImage, classVar, spheres, mobileImage }) => {
   return (
     <section className={`services-inner-hero ${classVar}`} style={{backgroundImage: `url(${backgroundImage})`}}>
       <div className="_container">
@@ -55,7 +55,7 @@ const ServicesInnerHero = ({ title, description, backgroundImage, heroImage, cla
       </div>
       <Image
         className="hero-mob"
-        src="/images/services/innerMob.png"
+        src={mobileImage}
         width={490}
         height={420}
       />

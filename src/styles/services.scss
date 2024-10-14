@@ -636,6 +636,10 @@ body {
           font-size: rem(18);
           width: rem(215);
         }
+        &:hover{
+          color: #E6F355;
+          border-color: #E6F355;
+        }
       }
     }
   }

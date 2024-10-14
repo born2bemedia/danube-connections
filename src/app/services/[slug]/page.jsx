@@ -6,6 +6,7 @@ import { Lato, Manrope } from "next/font/google";
 import HowDoThis from "./_components/HowDoThis";
 import CallToAction from "./_components/CallToAction";
 import SolutionsTabs from "./_components/SolutionsTabs";
+import OrderPopup from "@/components/OrderPopup";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ const ServiceInner = ({ params: { slug } }) => {
       <SolutionsTabs services={serviceData.services} />
       <HowDoThis howWeDoThis={serviceData.howWeDoThis} />
       <CallToAction callToAction={serviceData.callToAction} />
+      <OrderPopup />
     </div>
   );
 };

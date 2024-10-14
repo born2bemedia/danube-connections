@@ -143,6 +143,26 @@
           margin: 32px auto 0 auto;
         }
 
+        .file-wrap {
+          .upload-custom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: rem(16);
+            width: 100%;
+            height: rem(40);
+            color: #fff;
+            padding: 0 rem(24) 0 rem(24);
+            background-color: #161616;
+            border-radius: 0;
+            border: 1px solid #f3f3f380;
+            > div {
+              color: #e6f355;
+              text-transform: uppercase;
+            }
+          }
+        }
+
         .react-tel-input {
           input {
             font-size: rem(16);

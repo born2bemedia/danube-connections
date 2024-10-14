@@ -81,7 +81,7 @@ function OrderPopup() {
         setStatus({ success: false });
       }
     } catch (error) {
-      console.error(error);
+      //console.error(error);
       setStatus({ success: false });
       setSubmitting(false);
     }

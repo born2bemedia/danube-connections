@@ -349,7 +349,7 @@ function JobPopup() {
                             className="bordered-button"
                             disabled={isSubmitting}
                           >
-                            Submit Order
+                            Apply
                           </button>
 
                           {errorMessage && (

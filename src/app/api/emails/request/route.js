@@ -74,7 +74,7 @@ export async function POST(request) {
     const mailOptionsClient = {
       from: `"Danube Connections" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: "We have received your request",
+      subject: "Danube Connections: Consultation Request Confirmation",
       html: `
         <table width="640" style="border-collapse: collapse; margin: 0 auto; font-style: sans-serif">
           <thead>

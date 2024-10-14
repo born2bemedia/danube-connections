@@ -6,6 +6,7 @@ const servicesInner = {
     heroBack: "/images/services/service1_back.png",
     heroImage: "/images/services/service1.png",
     spheres: "/images/services/sphere1.png",
+    mobileImage: "/images/services/service1_mobileImage.png",
     services: [
       {
         title: "Supplier Sourcing and Vetting",
@@ -67,6 +68,7 @@ const servicesInner = {
     heroBack: "/images/services/service2_back.png",
     heroImage: "/images/services/service2.png",
     spheres: "/images/services/sphere2.png",
+    mobileImage: "/images/services/service2_mobileImage.png",
     services: [
       {
         title: "Executive Search and Recruitment",
@@ -138,6 +140,7 @@ const servicesInner = {
     heroBack: "/images/services/service3_back.png",
     heroImage: "/images/services/service3.png",
     spheres: "/images/services/sphere3.png",
+    mobileImage: "/images/services/service3_mobileImage.png",
     services: [
       {
         title: "Customer Targeting and Segmentation",
@@ -209,6 +212,7 @@ const servicesInner = {
     heroBack: "/images/services/service4_back.png",
     heroImage: "/images/services/service4.png",
     spheres: "/images/services/sphere4.png",
+    mobileImage: "/images/services/service4_mobileImage.png",
     services: [
       {
         title: "Real Estate Market Analysis",
@@ -281,6 +285,7 @@ const servicesInner = {
     heroBack: "/images/services/service5_back.png",
     heroImage: "/images/services/service5.png",
     spheres: "/images/services/sphere5.png",
+    mobileImage: "/images/services/service5_mobileImage.png",
     services: [
       {
         title: "Industry Networking Events",

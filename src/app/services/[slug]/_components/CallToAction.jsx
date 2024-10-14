@@ -22,7 +22,7 @@ const CallToAction = ({ callToAction }) => {
               style={{ fontFamily: "var(--font-manrope)" }}
               dangerouslySetInnerHTML={{ __html: callToAction.text }}
             />
-            <Link href={"#"}>Contact Us</Link>
+            <Link href={"/contacts"}>Contact Us</Link>
           </div>
           <Image
             className="hero-mob"

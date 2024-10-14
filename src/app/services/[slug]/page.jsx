@@ -42,6 +42,10 @@ const ServiceInner = ({ params: { slug } }) => {
       <ServicesInnerHero
         title={serviceData.title}
         description={serviceData.description}
+        backgroundImage={serviceData.heroBack}
+        heroImage={serviceData.heroImage}
+        classVar={serviceName}
+        spheres={serviceData.spheres}
       />
       <SolutionsTabs services={serviceData.services} />
       <HowDoThis howWeDoThis={serviceData.howWeDoThis} />

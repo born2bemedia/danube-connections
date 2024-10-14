@@ -280,7 +280,7 @@ body {
 
 .services-inner-hero {
   padding: rem(150) 0 rem(140) 0;
-  background-image: url(/images/services/innerBack.png);
+  //background-image: url(/images/services/innerBack.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top right;
@@ -288,6 +288,84 @@ body {
     padding: rem(110) 0;
     background-image: none;
   }
+
+  &.marketing_personnel_and_employee_recruitment{
+    .services-inner-hero__body{
+      > div{
+        &:last-child {
+          img{
+            &:first-child{
+              width: rem(540);
+              height: rem(540);
+            }
+            &:last-child{
+              width: rem(372);
+              height: rem(462);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.customer_introduction{
+    .services-inner-hero__body{
+      > div{
+        &:last-child {
+          img{
+            &:first-child{
+              width: rem(480);
+              height: rem(480);
+            }
+            &:last-child{
+              width: rem(440);
+              height: rem(440);
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.investment_opportunity_identification{
+    .services-inner-hero__body{
+      > div{
+        &:last-child {
+          img{
+            &:first-child{
+              width: rem(540);
+              height: rem(540);
+            }
+            &:last-child{
+              width: rem(436);
+              height: rem(408);
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ongoing_strategic_networking_and_partnership_development{
+    .services-inner-hero__body{
+      > div{
+        &:last-child {
+          img{
+            &:first-child{
+              width: rem(540);
+              height: auto;
+            }
+            &:last-child{
+              width: rem(343);
+              height: rem(406);
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .hero-mob {
     display: none;
     @media (max-width: rem(992)) {
@@ -303,7 +381,7 @@ body {
     justify-content: space-between;
 
     > div {
-      width: 55%;
+      width: 52%;
       @media (max-width: rem(992)) {
         width: 100%;
       }
@@ -317,12 +395,13 @@ body {
         }
         img {
           &:first-child {
-            margin-top: rem(80);
+            margin-top: rem(40);
+            height: auto;
           }
           &:last-child {
             position: absolute;
-            left: -30px;
-            top: 100px;
+            left: -20px;
+            top: 70px;
             animation: float 5s ease-in-out infinite;
           }
         }

@@ -3,6 +3,9 @@ const servicesInner = {
     title: "Supplier <span>Identification and Connection</span>",
     description:
       "Supplier Identification and Connection focuses on finding, vetting, and managing reliable suppliers to meet your quality and cost needs. We aim to help you build strong partnerships and optimise your supply chain for long-term success.",
+    heroBack: "/images/services/service1_back.png",
+    heroImage: "/images/services/service1.png",
+    spheres: "/images/services/sphere1.png",
     services: [
       {
         title: "Supplier Sourcing and Vetting",
@@ -61,6 +64,9 @@ const servicesInner = {
     title: "Marketing Personnel <span>and Employee Recruitment</span>",
     description:
       "Our Marketing Personnel and Employee Recruitment services are designed to help businesses build a talented marketing team equipped to drive growth and innovation. We focus on connecting you with the right professionals and ensuring they integrate seamlessly into your organisation.",
+    heroBack: "/images/services/service2_back.png",
+    heroImage: "/images/services/service2.png",
+    spheres: "/images/services/sphere2.png",
     services: [
       {
         title: "Executive Search and Recruitment",
@@ -129,6 +135,9 @@ const servicesInner = {
     title: "Customer <span>Introduction</span>",
     description:
       "The Customer Introduction service connects businesses with high-potential clients and partners. We help companies expand their market reach and drive growth by connecting them with the right customers through targeted segmentation, lead generation, and relationship management.",
+    heroBack: "/images/services/service3_back.png",
+    heroImage: "/images/services/service3.png",
+    spheres: "/images/services/sphere3.png",
     services: [
       {
         title: "Customer Targeting and Segmentation",
@@ -197,6 +206,9 @@ const servicesInner = {
     title: "Investment <span>Opportunity Identification</span>",
     description:
       "We identify high-value real estate investment opportunities that align with our clients' goals. Through thorough market analysis and due diligence, we ensure that each prospect offers strong growth potential and meets long-term objectives.",
+    heroBack: "/images/services/service4_back.png",
+    heroImage: "/images/services/service4.png",
+    spheres: "/images/services/sphere4.png",
     services: [
       {
         title: "Real Estate Market Analysis",
@@ -266,6 +278,9 @@ const servicesInner = {
       "On-going Strategic Networking and <span>Partnership Development</span>",
     description:
       "We help businesses build lasting relationships and foster strategic partnerships to unlock growth and expansion opportunities. Our services focus on creating valuable connections in key markets, facilitating collaborations, and enhancing your company's global presence.",
+    heroBack: "/images/services/service5_back.png",
+    heroImage: "/images/services/service5.png",
+    spheres: "/images/services/sphere5.png",
     services: [
       {
         title: "Industry Networking Events",

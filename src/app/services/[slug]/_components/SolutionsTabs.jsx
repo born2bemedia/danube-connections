@@ -4,6 +4,7 @@ import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import ExploreIcon from "@/icons/ExploreIcon";
 import ServiceArrow from "@/icons/ServiceArrow";
+import OrderButton from "@/components/OrderButton";
 
 const SolutionsTabs = ({ services }) => {
   // State to keep track of the active tab
@@ -76,10 +77,10 @@ const SolutionsTabs = ({ services }) => {
                       ))}
                     </ul>
                   </div>
-                  <button>
-                    <span>Order Consultation</span>
-                    <ExploreIcon />
-                  </button>
+                  <OrderButton
+                    text={"Order Consultation"}
+                    service={service.title}
+                  />
                 </div>
               </div>
             ))}

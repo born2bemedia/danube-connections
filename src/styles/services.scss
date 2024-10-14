@@ -286,7 +286,7 @@ body {
   background-position: top right;
   @media (max-width: rem(992)) {
     padding: rem(110) 0;
-    background-image: none;
+    background-image: none!important;
   }
 
   &.marketing_personnel_and_employee_recruitment{

@@ -25,24 +25,24 @@ const MarketingGaps = () => {
     // Слайды
     const slides = [
         {
-            title: "",
-            text: ""
+            title: "Fragmented <br /> Market Data",
+            text: "Difficulty in consolidating diverse marketing data into actionable insights."
         },
         {
-            title: "",
-            text: ""
+            title: "Client <br /> Acquisition",
+            text: "Lack of a structured approach to consistently bringing in high-quality leads."
         },
         {
-            title: "",
-            text: ""
+            title: "Scaling <br /> Operations",
+            text: "Struggles with expanding services while maintaining efficiency and service quality."
         },
         {
-            title: "",
-            text: ""
+            title: "Outdated <br /> Tools",
+            text: "Inability to integrate the latest marketing technologies and automation tools."
         },
         {
-            title: "",
-            text: ""
+            title: "Talent <br /> Acquisition",
+            text: "Finding and retaining specialised marketing professionals to drive innovation."
         },
     ];
 
@@ -68,7 +68,7 @@ const MarketingGaps = () => {
                                 spaceBetween={15}
                                 loop={true}
                                 slidesPerView={2}
-                                className="gaps-slider">
+                                className="gaps-slider _marketing">
                                 {slides.map((slide, index) => (
                                     <SwiperSlide key={index}>
                                         <div className="gaps-slider__item">

@@ -316,7 +316,52 @@ body {
     @media (max-width: 767px) {
       background-image: url("/images/areas/area-back-03.png");
       background-size: cover;
-      background-position: top center;
+      background-position: bottom center;
+    }
+  }
+
+  &._manu {
+    background-image: url("/images/areas/area-back-04.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 550px;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+      background-image: url("/images/areas/area-back-04.png");
+      background-size: contain;
+      background-position: center 120%;
+    }
+
+    .area-hero__body {
+      @media (max-width: 992px) {
+        padding-bottom: 250px;
+      }
+    }
+  }
+
+  &._finance {
+    background-image: url("/images/areas/area-back-05.png");
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    background-size: 600px;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+      background-image: url("/images/areas/area-back-05.png");
+      background-size: contain;
+      background-position: center 94%;
+    }
+
+    .area-hero__body {
+      @media (max-width: 992px) {
+        padding-bottom: 250px;
+      }
+    }
+
+    .area-hero__image .img-01 { 
+      width: 495px;
+      top: 110px;
     }
   }
 
@@ -424,11 +469,28 @@ body {
 
 .gaps-slider {
   display: flex;
+  align-items: stretch;
   gap: 22px;
 
   @media (max-width: 992px) {
     display: block;
     gap: 0;
+  }
+
+  &._marketing {
+    .gaps-slider__wrapper {
+      @media (max-width: 767px) {
+        min-height: 240px;
+      }
+    }
+  }
+
+  &._finance { 
+    .gaps-slider__wrapper {
+      @media (max-width: 767px) {
+        min-height: 280px;
+      }
+    }
   }
 
   .swiper-pagination {
@@ -467,6 +529,7 @@ body {
     background-color: #161616;
     padding: 22px 15px;
     transition: all 0.3s ease 0s;
+    height: 100%;
 
     &:hover {
       background-color: #1f1f1f;
@@ -493,6 +556,7 @@ body {
     font-family: "Lato", sans-serif;
     font-size: 18px;
     color: #f3f3f3;
+    font-weight: 300;
   }
 }
 
@@ -629,7 +693,7 @@ body {
   }
 
   &__col-01 {
-    width: 47%;
+    width: 50%;
     background-color: #e6f355;
     padding: 24px 17px;
     display: flex;
@@ -641,7 +705,7 @@ body {
   }
 
   &__col-02 {
-    width: 53%;
+    width: 50%;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     color: #0d0d0d;
@@ -664,7 +728,7 @@ body {
 
   &__title {
     font-family: "Lato", sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     line-height: normal;
     font-weight: 400;
     color: #1e1e1e;

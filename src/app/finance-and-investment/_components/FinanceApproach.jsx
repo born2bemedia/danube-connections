@@ -27,28 +27,28 @@ const FinanceApproach = () => {
     const slides = [
         {
             number: "01",
-            title: "",
-            text: ""
+            title: "In-Depth Analysis",
+            text: "Assessing your current financial practices and investment strategies to pinpoint areas for improvement."
         },
         {
             number: "02",
-            title: "",
-            text: ""
+            title: "Customised Solutions",
+            text: "Collaborating with your team, we design tailored strategies that align with your business objectives and regulatory requirements."
         },
         {
             number: "03",
-            title: "",
-            text: ""
+            title: "Expert Guidance",
+            text: "Providing insights and support throughout the implementation process, ensuring seamless integration of new strategies and technologies."
         },
         {
             number: "04",
-            title: "",
-            text: ""
+            title: "Performance Tracking",
+            text: "Continuously monitoring your financial performance, adjusting strategies based on market conditions and organisational goals."
         },
         {
             number: "05",
-            title: "",
-            text: ""
+            title: "Network Development",
+            text: "Extensively networking to connect you with potential investors, partners, and opportunities for collaboration."
         },
     ];
 

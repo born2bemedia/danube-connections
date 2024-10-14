@@ -8,7 +8,7 @@ const ManuHero = () => {
 
     return (
         <>
-            <section className="area-hero">
+            <section className="area-hero _manu">
                 <div className="area-hero__container _container">
                     <div className="area-hero__body">
                         <motion.h1
@@ -17,15 +17,15 @@ const ManuHero = () => {
                             viewport={{ once: true }}
                             variants={fadeInUp}
                             className="area-hero__title">
-
+                            Manufacturing <br /> and Retail
                         </motion.h1>
                         <div className="area-hero__circle">
                             <img src="/images/services/circle.svg" alt="circle" />
                             <img src="/images/services/arrow.svg" alt="arrow" />
                         </div>
                         <div className="area-hero__image">
-                            <img src="/images/areas/area-hero-desc-01.png" alt="image" className="img-01" />
-                            <img src="/images/areas/area-hero-mob-01.png" alt="image" className="img-02" />
+                            <img src="/images/areas/area-hero-desc-03.png" alt="image" className="img-01" />
+                            <img src="/images/areas/area-hero-desc-03.png" alt="image" className="img-02" />
                         </div>
                     </div>
                 </div>

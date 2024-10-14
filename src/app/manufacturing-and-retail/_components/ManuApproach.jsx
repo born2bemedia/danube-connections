@@ -27,28 +27,28 @@ const ManuApproach = () => {
     const slides = [
         {
             number: "01",
-            title: "",
-            text: ""
+            title: "Comprehensive <br/> Assessment",
+            text: "Conducting a thorough analysis of your existing operations, identifying specific challenges and opportunities for improvement."
         },
         {
             number: "02",
-            title: "",
-            text: ""
+            title: "Collaborative Strategy <br /> Development",
+            text: "Working closely with your team to create tailored strategies that align with your business goals and industry requirements."
         },
         {
             number: "03",
-            title: "",
-            text: ""
+            title: "Implementation <br/> and Support",
+            text: "Assisting in executing the proposed strategies, providing ongoing support to ensure successful integration and adoption."
         },
         {
             number: "04",
-            title: "",
-            text: ""
+            title: "Continuous Monitoring <br/> and Optimization",
+            text: "Monitoring performance metrics and industry trends, making adjustments as needed to ensure sustained improvement and competitiveness."
         },
         {
             number: "05",
-            title: "",
-            text: ""
+            title: "Partnership Building",
+            text: "Focusing on fostering long-term relationships with vendors and suppliers, enhancing your operational capabilities and resource access."
         },
     ];
 

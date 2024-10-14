@@ -25,24 +25,24 @@ const ManuGaps = () => {
     // Слайды
     const slides = [
         {
-            title: "",
-            text: ""
+            title: "Supply Chain <br /> Inefficiencies",
+            text: "Difficulty in streamlining complex supply chains, leading to delays, increased costs, and poor inventory management."
         },
         {
-            title: "",
-            text: ""
+            title: "Outdated <br /> Technology",
+            text: "Struggles to adopt new manufacturing and retail technologies, like automation and data analytics, to boost efficiency."
         },
         {
-            title: "",
-            text: ""
+            title: "Demand <br /> Forecasting",
+            text: "Inaccurate demand forecasting resulting in overstocking or stock shortages, affecting sales and profitability."
         },
         {
-            title: "",
-            text: ""
+            title: "Customer <br /> Experience",
+            text: "Difficulty in creating seamless, omnichannel customer experiences in both physical and digital retail environments."
         },
         {
-            title: "",
-            text: ""
+            title: "Sourcing <br /> and Vendor",
+            text: "Time-consuming search for reliable suppliers and managing multiple vendor relationships across borders."
         },
     ];
 

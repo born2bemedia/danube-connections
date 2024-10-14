@@ -25,7 +25,7 @@ const MarketingHero = () => {
                         </div>
                         <div className="area-hero__image">
                             <img src="/images/areas/area-hero-desc-02.png" alt="image" className="img-01" />
-                            <img src="/images/areas/area-hero-mob-02.png" alt="image" className="img-02" />
+                            <img src="/images/areas/area-hero-desc-02.png" alt="image" className="img-02" />
                         </div>
                     </div>
                 </div>

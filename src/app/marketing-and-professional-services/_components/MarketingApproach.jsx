@@ -27,28 +27,28 @@ const MarketingApproach = () => {
     const slides = [
         {
             number: "01",
-            title: "",
-            text: ""
+            title: "Comprehensive <br /> Market Insights",
+            text: "Target market analysis and identification of the most effective marketing strategies."
         },
         {
             number: "02",
-            title: "",
-            text: ""
+            title: "Optimised Lead <br/> Generation",
+            text: "Tailored approaches to attract and engage high-value clients using data-driven methods."
         },
         {
             number: "03",
-            title: "",
-            text: ""
+            title: "Technology Integration",
+            text: "Cutting-edge marketing tools, from CRM systems to advanced marketing automation."
         },
         {
             number: "04",
-            title: "",
-            text: ""
+            title: "Custom Talent Solutions",
+            text: "Sourcing specialised marketing talent and training existing teams for peak performance."
         },
         {
             number: "05",
-            title: "",
-            text: ""
+            title: "Performance Monitoring <br/> and Adjustments",
+            text: "Ongoing analysis and refinement of your strategies to ensure long-term success."
         },
     ];
 
@@ -57,7 +57,6 @@ const MarketingApproach = () => {
             <div className="approach__container _container">
                 <div className="approach__body">
                     <div
-                        
                         className="approach__top">
                         <h2 className="approach__title">
                             <span>Our</span>

@@ -25,24 +25,24 @@ const FinanceGaps = () => {
     // Слайды
     const slides = [
         {
-            title: "",
-            text: ""
+            title: "Regulatory <br /> Compliance",
+            text: "Navigating complex regulations can hinder investment opportunities and operational efficiency."
         },
         {
-            title: "",
-            text: ""
+            title: "Market <br /> Volatility",
+            text: "Fluctuating markets create uncertainty, making it difficult for businesses to make informed investment decisions."
         },
         {
-            title: "",
-            text: ""
+            title: "Access to <br/> Capital",
+            text: "Many firms struggle to secure funding for growth or innovation due to limited access to investors."
         },
         {
-            title: "",
-            text: ""
+            title: "Data <br/> Management",
+            text: "Inefficient data handling can lead to missed opportunities and suboptimal decision-making."
         },
         {
-            title: "",
-            text: ""
+            title: "Technology <br /> Integration",
+            text: "Legacy systems can hinder the adoption of modern financial tools and analytics."
         },
     ];
 
@@ -68,7 +68,7 @@ const FinanceGaps = () => {
                                 spaceBetween={15}
                                 loop={true}
                                 slidesPerView={2}
-                                className="gaps-slider">
+                                className="gaps-slider _finance">
                                 {slides.map((slide, index) => (
                                     <SwiperSlide key={index}>
                                         <div className="gaps-slider__item">

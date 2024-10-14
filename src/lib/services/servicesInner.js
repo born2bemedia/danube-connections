@@ -7,6 +7,8 @@ const servicesInner = {
     heroImage: "/images/services/service1.png",
     spheres: "/images/services/sphere1.png",
     mobileImage: "/images/services/service1_mobileImage.png",
+    seo_title: "Supplier Identification and Connection Services | Danube Connections",
+    seo_description: "Find reliable suppliers for your business with Danube Connections. Our expert team helps identify, vet, and connect you with trusted suppliers to streamline your supply chain and drive efficiency.",
     services: [
       {
         title: "Supplier Sourcing and Vetting",
@@ -69,6 +71,8 @@ const servicesInner = {
     heroImage: "/images/services/service2.png",
     spheres: "/images/services/sphere2.png",
     mobileImage: "/images/services/service2_mobileImage.png",
+    seo_title: "Marketing Personnel and Employee Recruitment Services | Danube Connections",
+    seo_description: "Find qualified marketing professionals and streamline employee recruitment with Danube Connections. Our tailored services connect you with top talent to grow your business.",
     services: [
       {
         title: "Executive Search and Recruitment",
@@ -141,6 +145,8 @@ const servicesInner = {
     heroImage: "/images/services/service3.png",
     spheres: "/images/services/sphere3.png",
     mobileImage: "/images/services/service3_mobileImage.png",
+    seo_title: "Customer Introduction Services | Danube Connections",
+    seo_description: "Explore Danube Connections' customer introduction services to help businesses connect with target clients, expand their market reach, and drive growth.",
     services: [
       {
         title: "Customer Targeting and Segmentation",
@@ -213,6 +219,8 @@ const servicesInner = {
     heroImage: "/images/services/service4.png",
     spheres: "/images/services/sphere4.png",
     mobileImage: "/images/services/service4_mobileImage.png",
+    seo_title: "Investment Opportunity Identification Services | Danube Connections",
+    seo_description: "Discover tailored investment opportunity identification services at Danube Connections to help businesses find profitable ventures and expand their portfolios.",
     services: [
       {
         title: "Real Estate Market Analysis",
@@ -286,6 +294,8 @@ const servicesInner = {
     heroImage: "/images/services/service5.png",
     spheres: "/images/services/sphere5.png",
     mobileImage: "/images/services/service5_mobileImage.png",
+    seo_title: "Strategic Networking and Partnership Development | Danube Connections",
+    seo_description: "Enhance your business growth with Danube Connections' ongoing strategic networking and partnership development services, designed to connect you with key industry players and opportunities.",
     services: [
       {
         title: "Industry Networking Events",

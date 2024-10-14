@@ -19,20 +19,20 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-/*export async function generateMetadata({ params: { slug } }) {
-    const serviceName = slug.replaceAll("-", "_");
-  const serviceData = services[serviceName];
-  
-    return {
+export async function generateMetadata({ params: { slug } }) {
+  const serviceName = slug.replaceAll("-", "_");
+  const serviceData = servicesInner[serviceName];
+
+  return {
+    title: serviceData.seo_title,
+    description: serviceData.seo_description,
+    openGraph: {
       title: serviceData.seo_title,
       description: serviceData.seo_description,
-      openGraph: {
-        title: serviceData.seo_title,
-        description: serviceData.seo_description,
-        images: "https://techfresco.com/images/meta.png",
-      },
-    };
-  }*/
+      //images: "/images/meta.png",
+    },
+  };
+}
 
 const ServiceInner = ({ params: { slug } }) => {
   const serviceName = slug.replaceAll("-", "_");

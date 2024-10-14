@@ -5,6 +5,18 @@ import AreasHero from "./_components/AreasHero";
 import CallToAction from "../services/[slug]/_components/CallToAction";
 import PagesLoop from "./_components/PagesLoop";
 
+export const metadata = {
+  title: "Our Expertise | Danube Connections",
+  description:
+    "Find out what industries we work with and how we can help each one to grow and develop. Danube Connections - your strategic partner for growth and development.",
+  openGraph: {
+    title: "Our Expertise | Danube Connections",
+    description:
+      "Find out what industries we work with and how we can help each one to grow and develop. Danube Connections - your strategic partner for growth and development.",
+    //images: "/images/meta.png",
+  },
+};
+
 const lato = Lato({
   subsets: ["latin"],
   weight: ["300", "700"],

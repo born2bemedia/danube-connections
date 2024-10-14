@@ -642,9 +642,9 @@ body {
 }
 
 .solutions-tabs {
-  margin: rem(150) 0;
+  margin: rem(0) 0 rem(150) 0;
   @media (max-width: rem(992)) {
-    margin: rem(50) 0 rem(100);
+    margin: rem(0) 0 rem(100);
   }
   &__body {
     display: flex;

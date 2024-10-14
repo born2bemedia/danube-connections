@@ -14,7 +14,7 @@ const PagesLoop = () => {
           className="areas-loop__body"
           style={{ fontFamily: "var(--font-lato)" }}
         >
-          <Link href="#">
+          <Link href="/technology-and-innovation">
             <h2 style={{ fontFamily: "var(--font-lato)" }}>
               Technology and <br />
               Innovation
@@ -36,7 +36,7 @@ const PagesLoop = () => {
               height={212}
             />
           </Link>
-          <Link href="#">
+          <Link href="/marketing-and-professional-services">
             <h2>
               Marketing and Professional <br />
               Services
@@ -58,7 +58,7 @@ const PagesLoop = () => {
               height={212}
             />
           </Link>
-          <Link href="#">
+          <Link href="/manufacturing-and-retail">
             <h2>Manufacturing and Retail</h2>
             <span className="explore">
               <span>Explore</span>
@@ -77,7 +77,7 @@ const PagesLoop = () => {
               height={212}
             />
           </Link>
-          <Link href="#">
+          <Link href="/finance-and-investment">
             <h2>Finance and Investment</h2>
             <span className="explore">
               <span>Explore</span>

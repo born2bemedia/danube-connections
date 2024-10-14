@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
 
-const TechApproach = () => {
+const MarketingApproach = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -27,29 +27,29 @@ const TechApproach = () => {
     const slides = [
         {
             number: "01",
-            title: "Needs <br/> Assessment",
-            text: "Conduct a thorough analysis of your business challenges and objectives."
+            title: "",
+            text: ""
         },
         {
             number: "02",
-            title: "Tailored Strategy <br /> Development",
-            text: "Create customised strategies that align with your goals and address identified pain points."
+            title: "",
+            text: ""
         },
         {
             number: "03",
-            title: "Implementation <br /> Support",
-            text: "Provide hands-on support during the implementation of solutions, ensuring seamless integration."
+            title: "",
+            text: ""
         },
         {
             number: "04",
-            title: "Monitoring and <br /> Optimization",
-            text: "Continuously assess results and refine strategies for maximum impact."
+            title: "",
+            text: ""
         },
         {
             number: "05",
-            title: "Partnership <br /> Cultivation",
-            text: "Foster long-term relationships with key stakeholders to drive ongoing success."
-        }
+            title: "",
+            text: ""
+        },
     ];
 
     return (
@@ -142,4 +142,4 @@ const TechApproach = () => {
     );
 };
 
-export default TechApproach;
+export default MarketingApproach;

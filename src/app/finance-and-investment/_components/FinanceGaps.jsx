@@ -8,7 +8,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const TechGaps = () => {
+const FinanceGaps = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -25,24 +25,24 @@ const TechGaps = () => {
     // Слайды
     const slides = [
         {
-            title: "Funding <br/> Shortages",
-            text: "Difficulty in accessing capital for research and development."
+            title: "",
+            text: ""
         },
         {
-            title: "Market <br/> Saturation",
-            text: "Struggling to differentiate products in a crowded market."
+            title: "",
+            text: ""
         },
         {
-            title: "Speed to <br/> Market",
-            text: "The need to rapidly develop and launch new products."
+            title: "",
+            text: ""
         },
         {
-            title: "Talent <br/> Acquisition",
-            text: "Challenges in finding skilled professionals to drive innovation."
+            title: "",
+            text: ""
         },
         {
-            title: "Regulatory <br/> Compliance",
-            text: "Navigating complex regulations in tech and innovation."
+            title: "",
+            text: ""
         },
     ];
 
@@ -111,4 +111,4 @@ const TechGaps = () => {
     );
 };
 
-export default TechGaps;
+export default FinanceGaps;

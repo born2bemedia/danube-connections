@@ -26,11 +26,14 @@ const Footer = () => {
                 </div>
                 <ul className="footer__contacts">
                   <li className="footer__contact">
-                    <Link href="mailto:danubestrategic@gmail.com" className="footer__contact-link">
+                    <Link
+                      href="mailto:danubestrategic@gmail.com"
+                      className="footer__contact-link"
+                    >
                       <span className="icon">
                         <Email />
                       </span>
-                      danubestrategic@gmail.com
+                      <span className="text">danubestrategic@gmail.com</span>
                     </Link>
                   </li>
                   {/*<li className="footer__contact">
@@ -46,7 +49,10 @@ const Footer = () => {
                       <span className="icon">
                         <Address />
                       </span>
-                      Budapest, Október 6 utca 5. A. I building 1. Floor door no 1/A, H-1051
+                      <span className="text">
+                        Budapest, Október 6 utca 5. A. I building 1. Floor door
+                        no 1/A, H-1051
+                      </span>
                     </Link>
                   </li>
                 </ul>
@@ -56,27 +62,42 @@ const Footer = () => {
                 <nav className="footer__menu">
                   <ul className="footer__list">
                     <li className="footer__item">
-                      <Link href="/services/supplier-identification-and-connection" className="footer__link">
+                      <Link
+                        href="/services/supplier-identification-and-connection"
+                        className="footer__link"
+                      >
                         Supplier Identification <br /> and Connection
                       </Link>
                     </li>
                     <li className="footer__item">
-                      <Link href="/services/marketing-personnel-and-employee-recruitment" className="footer__link">
+                      <Link
+                        href="/services/marketing-personnel-and-employee-recruitment"
+                        className="footer__link"
+                      >
                         Marketing Personnel and Employee <br /> Recruitment
                       </Link>
                     </li>
                     <li className="footer__item">
-                      <Link href="/services/customer-introduction" className="footer__link">
+                      <Link
+                        href="/services/customer-introduction"
+                        className="footer__link"
+                      >
                         Customer Introduction
                       </Link>
                     </li>
                     <li className="footer__item">
-                      <Link href="/services/investment-opportunity-identification" className="footer__link">
+                      <Link
+                        href="/services/investment-opportunity-identification"
+                        className="footer__link"
+                      >
                         Investment Opportunity Identification
                       </Link>
                     </li>
                     <li className="footer__item">
-                      <Link href="/services/ongoing-strategic-networking-and-partnership-development" className="footer__link">
+                      <Link
+                        href="/services/ongoing-strategic-networking-and-partnership-development"
+                        className="footer__link"
+                      >
                         On-going Strategic Networking and <br /> Partnership
                         Development
                       </Link>
@@ -89,22 +110,34 @@ const Footer = () => {
                 <nav className="footer__menu">
                   <ul className="footer__list">
                     <li className="footer__item">
-                      <Link href="/technology-and-innovation" className="footer__link">
+                      <Link
+                        href="/technology-and-innovation"
+                        className="footer__link"
+                      >
                         Technology and Innovation
                       </Link>
                     </li>
                     <li className="footer__item">
-                      <Link href="/finance-and-investment" className="footer__link">
+                      <Link
+                        href="/finance-and-investment"
+                        className="footer__link"
+                      >
                         Financial and Investment
                       </Link>
                     </li>
                     <li className="footer__item">
-                      <Link href="/marketing-and-professional-services" className="footer__link">
+                      <Link
+                        href="/marketing-and-professional-services"
+                        className="footer__link"
+                      >
                         Marketing and Professional <br /> Services
                       </Link>
                     </li>
                     <li className="footer__item">
-                      <Link href="/manufacturing-and-retail" className="footer__link">
+                      <Link
+                        href="/manufacturing-and-retail"
+                        className="footer__link"
+                      >
                         Manufacturing and Retail
                       </Link>
                     </li>
@@ -147,7 +180,10 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className="footer__policy-item">
-                    <Link href="/privacy-policy" className="footer__policy-link">
+                    <Link
+                      href="/privacy-policy"
+                      className="footer__policy-link"
+                    >
                       Privacy
                     </Link>
                   </li>

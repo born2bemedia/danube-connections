@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale } }) {
-  const page = await getPage("terms-and-conditions", locale);
+  const page = await getPage("terms-of-use", locale);
 
   return {
     title: page.title,
@@ -31,15 +31,17 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 const TermsAndConditions = async () => {
-  const page = await getPage("terms-and-conditions");
+  const page = await getPage("terms-of-use");
   return (
     <>
-      <div className="policy-head"></div>
       <section className="policy">
-        <div className="policy__container">
+        <div className="_container">
           <div className="policy__body">
             <h1 className="policy__title">{page.title}</h1>
-            <article dangerouslySetInnerHTML={{ __html: page.body }} className="policy__content" />
+            <article
+              dangerouslySetInnerHTML={{ __html: page.body }}
+              className="policy__content"
+            />
           </div>
         </div>
       </section>

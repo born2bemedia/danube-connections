@@ -152,6 +152,8 @@
             }
         }
 
+        .text { width: calc(100% - 42px); }
+
         &:hover { 
             color: #E6F355;
             .icon { 

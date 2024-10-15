@@ -1,0 +1,96 @@
+@import "mixin";
+
+.insights-hero {
+    @include adaptiv-value('padding-top', 180, 100, 1);
+    @include adaptiv-value('padding-bottom', 200, 100, 1);
+    overflow: hidden;
+    background-image: url('/images/insights/insights-back-01.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 650px;
+
+    @media(max-width: 992px) { 
+        padding-bottom: 700px;
+        background-image: url('/images/insights/insights-back-02.png');
+        background-position: top center;
+        background-size: contain;
+    }
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @media(max-width: 992px) { 
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        @include adaptiv-value("font-size", 62, 48, 1);
+        line-height: normal;
+        width: 50%;
+        width: fit-content;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        span {
+            font-size: 32px;
+            line-height: normal;
+            color: #e6f355;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: "Manrope", sans-serif;
+        }
+    }
+
+    &__image {
+        max-width: 656px;
+        height: 492px;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: -100px;
+
+        @media(max-width: 992px) { 
+            right: auto;
+            left: 50%;
+            top: 100%;
+            bottom: 0;
+            transform: translate(-50%, 0);
+            object-fit: contain;
+        }
+    }
+
+    &__circle {
+        margin-top: rem(65);
+        margin-left: -10px;
+        position: relative;
+        width: fit-content;
+        @media (max-width: rem(992)) {
+            //display: none;
+            margin-top: rem(24);
+        }
+        img {
+            &:first-child {
+                animation: rotate 40s linear infinite;
+            }
+            &:last-child {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

@@ -1,94 +1,79 @@
 @import "mixin";
 
-.policy-head {
-    width: 100%;
-    height: 80px;
-    background-color: #18231f;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @media (max-width: 767px) {
-        height: 82px;
-    }
-}
-
 .policy {
-    overflow: hidden;
-    @include adaptiv-value("padding-top", 200, 180, 1);
-    @include adaptiv-value('padding-bottom', 120, 80, 1);
-    font-family: "Urbanist", sans-serif;
-    &__container {
-        margin: 0 auto;
-        padding: 0 16px;
-        max-width: 1464px;
-        width: 100%;
+  margin: rem(150) 0 rem(150) 0;
+  @media (max-width: rem(992)) {
+    margin: rem(100) 0 rem(100) 0;
+  }
+  &__body {
+    padding: rem(60) rem(50);
+    background: #f3f3f3;
+    @media (max-width: rem(992)) {
+      padding: rem(30) rem(20);
     }
-
-    &__body {
+    h1 {
+      color: #050505;
+      font-size: rem(42);
+      font-weight: 800;
+      line-height: 1.2;
+      text-align: left;
+      margin: 0 0 rem(40) 0;
+      text-transform: uppercase;
+      @media (max-width: rem(992)) {
+        font-size: rem(32);
+      }
     }
-
-    &__title {
-        @include adaptiv-value("font-size", 64, 38, 1);
-        line-height: normal;
-        font-weight: 600;
-        text-align: center;
-        position: relative;
-        padding: 0 0 40px 0;
-
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 0);
-            width: 120vw;
-            height: 1px;
-            border-bottom: solid 1px #cecece;
+    article {
+      h2 {
+        color: #050505;
+        font-size: rem(20);
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: left;
+        margin: rem(40) 0 rem(20);
+      }
+      p {
+        color: #050505;
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        margin: 0 0 rem(20) 0;
+      }
+      ul {
+        margin: 0 0 rem(20) 0;
+        padding: 0 0 0 rem(20);
+        li {
+          list-style-type: disc;
+          color: #050505;
+          font-size: rem(16);
+          font-weight: 400;
+          line-height: 1.2;
+          text-align: left;
         }
+      }
+      ol {
+        margin: 0 0 rem(20) 0;
+        padding: 0 0 0 rem(20);
+        list-style-type: decimal;
+        li {
+          list-style-type: decimal;
+          color: #050505;
+          font-size: rem(16);
+          font-weight: 400;
+          line-height: 1.2;
+          text-align: left;
+        }
+      }
+      a {
+        color: #050505;
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: 1.2;
+        text-align: left;
+        font-style: italic;
+        text-decoration: underline;
+      }
     }
-
-    &__content {
-        margin: 40px 0 0 0;
-
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 40px 0 24px 0;
-            font-size: 32px;
-            font-weight: 600;
-        }
-
-        p {
-            margin: 0 0 16px 0;
-            font-size: 24px;
-        }
-
-        ul {
-            margin: 0 0 16px 32px;
-            li {
-                list-style-type: disc;
-                font-size: 24px;
-                line-height: 120%;
-            }
-        }
-
-        ol {
-            margin: 0 0 16px 32px;
-            li {
-                list-style: auto;
-                line-height: 120%;
-            }
-        }
-
-        a {
-            color: #315149;
-            font-weight: 600;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+  }
 }

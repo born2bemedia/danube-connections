@@ -2,43 +2,46 @@
 title: "Cookie policy"
 ---
 
-Nexoria uses cookies and similar tracking technologies to enhance the browsing experience, analyze site traffic, and understand user preferences. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+## Introduction
+
+Danube Strategic Advisors Ltd. (Company Number: 01-09-435155), located at Budapest, Október 6 utca 5. A. I building 1. Floor door no 1/A, H-1051, is committed to ensuring the privacy and security of our users' corporate data. This Cookie Policy explains what cookies are, how we use them on our website, and your choices regarding our use of cookies.
 
 ## What Are Cookies?
-Cookies are small text files placed on your device by websites you visit. They are widely used to make websites work more efficiently and to provide information to the site owners. Cookies can be categorized into different types based on their purpose:
 
-- **Essential Cookies:** These cookies are necessary for the website to function and cannot be disabled. They allow you to navigate the site and use its features.
-- **Performance Cookies:** These cookies collect information about how visitors use our website, such as which pages are visited most often. This data helps us improve our site’s performance and user experience.
-- **Functionality Cookies:** These cookies allow our website to remember your choices (such as your username, language, or region) and provide enhanced features and personalization.
-- **Targeting Cookies:** Our advertising partners may set these cookies through our site. They may be used to build a profile of your interests and show you relevant ads on other sites.
+Cookies are small text files that are stored on your device (computer, tablet, or smartphone) when you visit a website. They help the website recognize your device and store certain information about your preferences or past actions. Cookies are widely used to enhance user experience and analyze website traffic.
 
-## How We Use Cookies
+How We Use Cookies
+
 We use cookies for various purposes, including:
 
-- To ensure the proper functioning of our website and its services.
-- To analyze website usage and enhance user experience.
-Remember your preferences and settings.
-- To deliver targeted advertisements and track the effectiveness of our marketing efforts.
-
-## Your Choices Regarding Cookies
-You have several options to manage your cookie preferences:
-
-- **Browser Settings:** Most web browsers allow you to control cookies through their settings. You can set your browser to refuse cookies or to alert you when cookies are being sent. If you disable cookies, some parts of our website may malfunction.
-- **Opt-Out Links:** You can opt out of performance and targeting cookies through various online tools. For example, you can use the Network Advertising Initiative’s opt-out tool or the Digital Advertising Alliance’s opt-out page.
-- **Cookie Consent Management:** When you visit our website, you will see a cookie consent banner that allows you to accept or reject non-essential cookies.
+- Essential Cookies: These cookies are necessary for the website to function correctly and cannot be disabled in our systems. They are usually set in response to your actions, such as setting your privacy preferences, logging in, or filling out forms.
+- Performance Cookies: These cookies allow us to count visits and traffic sources, enabling us to measure and improve the performance of our website. They help us understand how users interact with the site and identify areas for improvement.
+- Functionality Cookies: These cookies enhance the functionality of our website by remembering your preferences, such as language and region, and providing personalized features.
+- Targeting Cookies: Our advertising partners may set these cookies to build a profile of your interests and show you relevant ads on other sites. They do not store personal information but are based on uniquely identifying your browser and internet device.
 
 ## Third-Party Cookies
 
-Our website may contain cookies from third-party services that are not in our control. These cookies are used for various purposes, including analytics and advertising. We encourage you to review the privacy policies of these third parties for more information about their use of cookies.
+In addition to our own cookies, we may also use various third-party cookies to report website usage statistics and deliver advertisements on and off the site. These third-party services may also use cookies to track your online activity across different websites.
+
+## Managing Cookies
+
+You have the right to accept or decline cookies. Most web browsers automatically accept cookies, but you can modify your browser settings to decline cookies. Please note that if you choose to decline cookies, you may not be able to experience the interactive features of our website fully.
+
+To manage cookies, you can use the following options:
+
+Browser Settings: Adjust your browser settings to block or delete cookies. Each browser is different, so please check your browser's help menu for instructions on how to manage cookies.
+
+Opt-Out Tools: Some third-party services provide opt-out tools that allow you to refuse cookies for tracking purposes. Visit the respective websites for more information.
 
 ## Changes to This Cookie Policy
 
-We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you when we make significant changes by posting the updated policy on our website with a new effective date.
+We may update this Cookie Policy from time to time to reflect changes in our practices or for operational, legal, or regulatory reasons. We will notify users of any changes by updating the date at the top of this policy. Your continued use of the website following the posting of changes constitutes your acceptance of such changes.
 
 ## Contact Us
 
-If you have any questions about our Cookie Policy or our use of cookies, please contact us at:
+If you have any questions about our Cookie Policy or our data practices, please contact us at:
 
-- Email: info@nexoria.ai 
-- Phone <a href="tel:+48573587868">+48573587868</a>
-- Website: https://nexoria.ai 
+- Email: [danubestrategic@gmail.com](mailto:danubestrategic@gmail.com)
+- Website: [danubeconnections.com](https://danubeconnections.com)
+
+We are committed to addressing your inquiries and providing assistance as needed.

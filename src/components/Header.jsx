@@ -73,7 +73,7 @@ const Header = () => {
                   onClick={() => toggleSubmenu("services")}
                 >
                   <div className="wrapper">
-                    <span>Services</span>
+                    <Link href="/services" onClick={closeMenu}>Services</Link>
                     <button type="button" className="btn">
                       {!submenuOpen["services"] ? (
                         <img src="/images/menu-right.svg" alt="expand" />
@@ -114,7 +114,7 @@ const Header = () => {
                   onClick={() => toggleSubmenu("company")}
                 >
                   <div className="wrapper">
-                    <span>Areas of Expertise</span>
+                    <Link href="/areas-of-expertise" onClick={closeMenu}>Areas of Expertise</Link>
                     <button type="button" className="btn">
                       {!submenuOpen["company"] ? (
                         <img src="/images/menu-right.svg" alt="expand" />

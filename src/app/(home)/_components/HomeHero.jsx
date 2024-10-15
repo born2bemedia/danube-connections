@@ -53,7 +53,7 @@ const HomeHero = () => {
                             variants={fadeInUp}
                             custom={0.3}
                             className="wrapper">
-                            <Link href="#" className="home-hero__link">
+                            <Link href="/services" className="home-hero__link">
                                 Learn More
                                 <ArrowBtn />
                             </Link>

@@ -18,7 +18,7 @@ const HomeInsights = () => {
                             <br />
                             Insights
                         </h2>
-                        <Link href="#" className="home-insights__more-link">More Insights</Link>
+                        <Link href="/insights" className="home-insights__more-link">More Insights</Link>
                     </div>
                     <div className="home-insights__items">
                         <motion.div
@@ -29,7 +29,7 @@ const HomeInsights = () => {
                             className="home-insights__item">
                             <div className="home-insights__icon"><img src="/images/home/home-insights-icon-01.png" alt="image" /></div>
                             <h2 className="home-insights__label">Investment Opportunities for Businesses 2025</h2>
-                            <Link href="#" className="home-insights__link">
+                            <Link href="/insights/investment-opportunities-for-businesses-2025" className="home-insights__link">
                                 Open
                                 <span className="icon">
                                     <ArrowBtn />
@@ -45,7 +45,7 @@ const HomeInsights = () => {
                             className="home-insights__item">
                             <div className="home-insights__icon"><img src="/images/home/home-insights-icon-02.png" alt="image" /></div>
                             <h2 className="home-insights__label">Supply Chain Optimisation Tools and Technologies 2025</h2>
-                            <Link href="#" className="home-insights__link">
+                            <Link href="/insights/state-of-business-networking-2024" className="home-insights__link">
                                 Open
                                 <span className="icon">
                                     <ArrowBtn />
@@ -61,7 +61,7 @@ const HomeInsights = () => {
                             className="home-insights__item">
                             <div className="home-insights__icon"><img src="/images/home/home-insights-icon-03.png" alt="image" /></div>
                             <h2 className="home-insights__label">State of Business Networking 2024</h2>
-                            <Link href="#" className="home-insights__link">
+                            <Link href="/insights/supply-chain-optimisation-tools-and-technologies-2025" className="home-insights__link">
                                 Open
                                 <span className="icon">
                                     <ArrowBtn />

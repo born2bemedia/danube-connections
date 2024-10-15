@@ -11,7 +11,7 @@ export const metadata = {
         title: "",
         description:
             "",
-        images: "",
+        images: "https://danubestrategic.com/images/meta.png",
     },
 };
 

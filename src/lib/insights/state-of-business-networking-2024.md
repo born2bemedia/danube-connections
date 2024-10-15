@@ -1,7 +1,7 @@
 ---
 title: "<span>Supply Chain Optimisation Tools</span> <br/> and Technologies <br/> 2025"
-seo_title: "Investment Opportunities"
-seo_description: "Explore investment opportunities for 2025."
+seo_title: "State of Business Networking 2024 | Danube Connections"
+seo_description: "Discover the key trends, challenges, and opportunities in business networking for 2024, with insights on digital platforms, hybrid events, and diversity."
 thumbnail: "/images/insights/article-img-03.png"
 poster_desc: "/images/insights/article-img-03.png"
 poster_mobile: "/images/insights/article-img-03.png"

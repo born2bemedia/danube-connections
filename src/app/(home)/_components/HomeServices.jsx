@@ -29,27 +29,32 @@ const NewHomeServices = () => {
         {
             number: "/images/home/home-services-01.svg",
             title: "Supplier Identification and Connection",
-            text: "We identify and connect your business with top-tier suppliers that meet rigorous standards for quality, cost-effectiveness, and reliability. By vetting and building relationships with suppliers aligned to your operational needs, we streamline your supply chain and reduce risks, ensuring long-term value and consistency in business operations."
+            text: "We identify and connect your business with top-tier suppliers that meet rigorous standards for quality, cost-effectiveness, and reliability. By vetting and building relationships with suppliers aligned to your operational needs, we streamline your supply chain and reduce risks, ensuring long-term value and consistency in business operations.",
+            link: "/services/supplier-identification-and-connection"
         },
         {
             number: "/images/home/home-services-02.svg",
             title: "Marketing Personnel and Employee Recruitment",
-            text: "We specialise in sourcing and recruiting talented marketing professionals and key employees who meet industry standards and are a cultural fit for your organisation. Whether you need executives, digital marketing experts, or specialised personnel, we ensure that each candidate aligns with your business objectives, driving growth and innovation from within."
+            text: "We specialise in sourcing and recruiting talented marketing professionals and key employees who meet industry standards and are a cultural fit for your organisation. Whether you need executives, digital marketing experts, or specialised personnel, we ensure that each candidate aligns with your business objectives, driving growth and innovation from within.",
+            link: "/services/marketing-personnel-and-employee-recruitment"
         },
         {
             number: "/images/home/home-services-03.svg",
             title: "Customer Introduction",
-            text: "Our service connects your business with potential customers strategically aligned with your market and business objectives. Targeting key audiences and decision-makers, we help you expand your customer base, drive revenue growth, and establish long-lasting business relationships."
+            text: "Our service connects your business with potential customers strategically aligned with your market and business objectives. Targeting key audiences and decision-makers, we help you expand your customer base, drive revenue growth, and establish long-lasting business relationships.",
+            link: "/services/customer-introduction"
         },
         {
             number: "/images/home/home-services-04.svg",
             title: "Investment Opportunity Identification",
-            text: "We actively seek and evaluate real estate investment opportunities in Hungary, focusing on high-return prospects and strategic fit. By conducting in-depth market analysis and due diligence, we ensure that each opportunity aligns with your financial goals, offering profitable and sustainable investments."
+            text: "We actively seek and evaluate real estate investment opportunities in Hungary, focusing on high-return prospects and strategic fit. By conducting in-depth market analysis and due diligence, we ensure that each opportunity aligns with your financial goals, offering profitable and sustainable investments.",
+            link: "/services/investment-opportunity-identification"
         },
         {
             number: "/images/home/home-services-05.svg",
             title: "On-going Strategic Networking and Partnership Development",
-            text: "We facilitate the development of strategic partnerships with local businesses, investors, and key industry stakeholders to enhance your market presence and business potential. Our ongoing networking efforts ensure that you continuously build relationships that drive collaboration, innovation, and long-term success in both local and international markets."
+            text: "We facilitate the development of strategic partnerships with local businesses, investors, and key industry stakeholders to enhance your market presence and business potential. Our ongoing networking efforts ensure that you continuously build relationships that drive collaboration, innovation, and long-term success in both local and international markets.",
+            link: "/services/ongoing-strategic-networking-and-partnership-development"
         }
     ];
 
@@ -82,7 +87,7 @@ const NewHomeServices = () => {
                                             <div className="home-services-slider__wrapper">
                                                 <h3 className="home-services-slider__title">{slide.title}</h3>
                                                 <div className="home-services-slider__text">{slide.text}</div>
-                                                <Link href="#" className="home-services-slider__link">
+                                                <Link href={slide.link} className="home-services-slider__link">
                                                     Learn More
                                                     <span className="icon">
                                                         <ArrowBtn />
@@ -107,7 +112,7 @@ const NewHomeServices = () => {
                                         <div className="home-services-slider__wrapper">
                                             <h3 className="home-services-slider__title">{slide.title}</h3>
                                             <div className="home-services-slider__text">{slide.text}</div>
-                                            <Link href="#" className="home-services-slider__link">
+                                            <Link href={slide.link} className="home-services-slider__link">
                                                 Learn More
                                                 <span className="icon">
                                                     <ArrowBtn />

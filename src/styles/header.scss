@@ -41,10 +41,10 @@
 
     &__menu {
         position: absolute;
-        top: 98px;
+        top: 82px;
         left: 0;
         width: 100%;
-        min-height: calc(100vh - 98px);
+        min-height: calc(100vh - 82px);
         background-color: #161616;
         transition: all 0.3s ease 0s;
         opacity: 0;
@@ -67,6 +67,7 @@
     &__list {
         @include adaptiv-value("padding-top", 80, 0, 1);
         @include adaptiv-value("padding-bottom", 80, 0, 1);
+        position: relative;
     }
 
     &__item-menu {
@@ -103,7 +104,9 @@
 
                 .wrapper { 
                     .btn { 
-                        transform: rotate(-90deg);
+                        @media(max-width: 992px) { 
+                            transform: rotate(-90deg);
+                        }
                     }
                 }
             }
@@ -112,11 +115,22 @@
     }
 
     &__submenu {
+
+        @media(min-width: 992px) { 
+            position: absolute;
+            top: 80px;
+            left: 406px;
+        }
     }
 
     &__subitem {
         a {
             font-family: 'Rubik', sans-serif;
+            border: none;
+            width: 100%;
+            max-width: 100%;
+            text-transform: none;
+            font-weight: 300;
             @media(max-width: 992px) { 
                 padding: 15px 38px;
                 font-size: 18px;

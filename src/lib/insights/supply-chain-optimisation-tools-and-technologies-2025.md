@@ -1,7 +1,7 @@
 ---
 title: "<span>State</span> <br/> of Business <br/> Networking 2024"
-seo_title: "Investment Opportunities"
-seo_description: "Explore investment opportunities for 2025."
+seo_title: "Supply Chain Optimisation Tools and Technologies 2025 | Danube Connections"
+seo_description: "Explore the latest supply chain optimization tools and technologies for 2025, which will enhance efficiency, transparency, and innovation across industries."
 thumbnail: "/images/insights/article-img-04.png"
 poster_desc: "/images/insights/article-img-04.png"
 poster_mobile: "/images/insights/article-img-04.png"

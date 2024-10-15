@@ -7,14 +7,14 @@ import HomeText from "./_components/HomeText";
 import HomeWork from "./_components/HomeWork";
 
 export const metadata = {
-  title: "",
+  title: "Expert Solutions for Global Business Growth | Danube Connections",
   description:
-    "",
+    "Danube Connections offers expert business consulting, helping companies enhance operations, form strategic partnerships, and grow globally.",
   openGraph: {
-    title: "",
+    title: "Expert Solutions for Global Business Growth | Danube Connections",
     description:
-      "",
-    images: "",
+      "Danube Connections offers expert business consulting, helping companies enhance operations, form strategic partnerships, and grow globally.",
+    images: "https://danubestrategic.com/images/meta.png",
   },
 };
 

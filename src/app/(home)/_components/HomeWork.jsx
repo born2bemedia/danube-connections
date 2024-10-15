@@ -109,7 +109,7 @@ const HomeWork = () => {
                             </motion.div>
                         )}
 
-                        <Link href="#" className="home-work__banner">
+                        <Link href="/areas-of-expertise" className="home-work__banner">
                             <h3 className="title">
                                 Explore Our Expertise
                                 <div className="icon"><ArrowBtn /></div>

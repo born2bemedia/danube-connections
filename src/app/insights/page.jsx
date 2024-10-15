@@ -5,14 +5,14 @@ import InsightsMain from "./_components/InsightsMain";
 
 
 export const metadata = {
-  title: "",
+  title: "Market Insights | Danube Connections",
   description:
-    "",
+    "Explore in-depth market research and business insights across various industries. Stay informed with the latest reports and trends from Danube Connections.",
   openGraph: {
-    title: "",
+    title: "Market Insights | Danube Connections",
     description:
-      "",
-    images: "",
+      "Explore in-depth market research and business insights across various industries. Stay informed with the latest reports and trends from Danube Connections.",
+    images: "https://danubestrategic.com/images/meta.png",
   },
 };
 

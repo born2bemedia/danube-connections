@@ -19,15 +19,14 @@ const manrope = Manrope({ subsets: ["latin"], weight: ["200", "300", "400", "500
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body  className={`${dmsans.className} ${lato.className} ${manrope.className}`}>
-
+      <body className={`${dmsans.className} ${lato.className} ${manrope.className}`}>
         {/* <GoogleAnalytics gaId="" /> */}
         <PopupsProvider>
           {/* <Preloader /> */}
           <Header />
           <main className="site">{children}</main>
           <Footer />
-         {/*  <OrderPopup />
+          {/*  <OrderPopup />
           <ServicePopup /> */}
         </PopupsProvider>
       </body>

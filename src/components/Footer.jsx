@@ -18,25 +18,25 @@ const Footer = () => {
           <div className="footer__row-01">
             <div className="footer__wrapper _container">
               <div className="footer__col-01">
-                <Link href="/" className="footer__logo">LOGO</Link>
+                <Link href="/" className="footer__logo"><img src="/images/danube-logo.svg" alt="image" /></Link>
                 <div className="footer__text">Connecting Business and <br /> Opportunity</div>
                 <ul className="footer__contacts">
                   <li className="footer__contact">
-                    <Link href="#" className="footer__contact-link">
+                    <Link href="mailto:danubestrategic@gmail.com" className="footer__contact-link">
                       <span className="icon"><Email /></span>
-                      Email
+                      danubestrategic@gmail.com
                     </Link>
                   </li>
-                  <li className="footer__contact">
+                  {/*  <li className="footer__contact">
                     <Link href="#" className="footer__contact-link">
                       <span className="icon"><Phone /></span>
                       Phone
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="footer__contact">
                     <Link href="#" className="footer__contact-link">
                       <span className="icon"><Address /></span>
-                      Address
+                      Budapest, Október 6 utca 5. A. I building 1. Floor door no 1/A, H-1051
                     </Link>
                   </li>
                 </ul>

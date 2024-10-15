@@ -23,9 +23,10 @@
     }
 
     &__logo {
-        @include adaptiv-value("font-size", 38, 24, 1);
-        font-weight: 600;
-        color: #fff;
+        a { 
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__col-01 {

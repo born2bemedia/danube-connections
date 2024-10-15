@@ -42,7 +42,7 @@ const Header = () => {
       <div className="header__container _container">
         <div className="header__body">
           <div className="header__col-01">
-            <Link href="/" className="header__logo">LOGO</Link>
+            <Link href="/" className="header__logo"><img src="/images/danube-logo.svg" alt="logo" /></Link>
           </div>
           <div className="header__col-02">
             <button onClick={() => menuOpen()} className={`header__menu-btn ${menuOpened ? "_active" : ""}`}>

@@ -111,6 +111,12 @@
 
     &__contact { 
         
+        &:nth-child(2) { 
+           
+            a { 
+                align-items: flex-start;
+            }
+        }
     }
 
     &__contact-link { 
@@ -120,11 +126,18 @@
         transition: all 0.3s ease 0s;
         display: flex;
         align-items: center;
+        font-weight: 300;
         column-gap: 14px;
+        max-width: 218px;
+        @media(max-width: 767px) { 
+            max-width: 100%;
+        }
 
         .icon { 
             width: 28px;
             height: 28px;
+            min-width: 28px;
+            min-height: 28px;
             display: flex;
             align-items: center;
             justify-content: center;

@@ -13,10 +13,10 @@ export async function getPost(slug, locale) {
   const text = await readFile(`./src/lib/insights/${fileSlug}.md`, "utf8");
   const {
     content,
-    data: { title, seo_title, seo_description, thumbnail },
+    data: { title, seo_title, seo_description, thumbnail, poster_desc, poster_mobile, back_desc, back_mobile },
   } = matter(text);
   const body = marked(content);
-  return { slug: fileSlug, title, seo_title, seo_description, thumbnail, body };
+  return { slug: fileSlug, title, seo_title, seo_description, thumbnail, poster_desc, poster_mobile, back_desc, back_mobile, body };
 }
 
 export async function getSlugs() {

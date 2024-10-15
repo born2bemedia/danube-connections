@@ -50,10 +50,10 @@ const SolutionsTabs = ({ services }) => {
                         ))}
                       </ul>
                     </div>
-                    <button>
-                      <span>Order Consultation</span>
-                      <ExploreIcon />
-                    </button>
+                    <OrderButton
+                      text={"Order Consultation"}
+                      service={service.title}
+                    />
                   </div>
                 </div>
               </>

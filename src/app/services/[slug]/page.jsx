@@ -30,7 +30,7 @@ export async function generateMetadata({ params: { slug } }) {
     openGraph: {
       title: serviceData.seo_title,
       description: serviceData.seo_description,
-      //images: "/images/meta.png",
+      images: "https://danubestrategic.com/images/meta.png",
     },
   };
 }

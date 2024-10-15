@@ -15,7 +15,7 @@ export const metadata = {
     title: "Career | Danube Connections",
     description:
       "Explore career opportunities at Danube Connections. Join our team to develop your skills in a dynamic environment focused on international business growth.",
-    //images: "/images/meta.png",
+    images: "https://danubestrategic.com/images/meta.png",
   },
 };
 

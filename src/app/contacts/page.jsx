@@ -13,7 +13,7 @@ export const metadata = {
     title: "Contacts | Danube Connections",
     description:
       "Contact Danube Connections for inquiries, support, or collaboration. Our contact information includes phone, email, and addresses.",
-    //images: "/images/meta.png",
+    images: "https://danubestrategic.com/images/meta.png",
   },
 };
 

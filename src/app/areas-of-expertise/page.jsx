@@ -13,7 +13,7 @@ export const metadata = {
     title: "Our Expertise | Danube Connections",
     description:
       "Find out what industries we work with and how we can help each one to grow and develop. Danube Connections - your strategic partner for growth and development.",
-    //images: "/images/meta.png",
+    images: "https://danubestrategic.com/images/meta.png",
   },
 };
 

@@ -24,7 +24,7 @@ export const metadata = {
     title: "Services | Danube Connections",
     description:
       "Explore our range of services at Danube Connections, including supply chain optimization, investment facilitation, talent acquisition, and customer introduction services designed to drive business success.",
-    //images: "/images/meta.png",
+    images: "https://danubestrategic.com/images/meta.png",
   },
 };
 

@@ -15,7 +15,7 @@ export const metadata = {
     title: "About Us | Danube Connections",
     description:
       "Learn about Danube Connections, our mission, values, and the team dedicated to providing tailored solutions for business growth and development.",
-    //images: "/images/meta.png",
+    images: "https://danubestrategic.com/images/meta.png",
   },
 };
 

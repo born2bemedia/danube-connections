@@ -3,6 +3,7 @@ import React from "react";
 import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const AreasHero = () => {
   return (
@@ -22,10 +23,10 @@ const AreasHero = () => {
             >
               Areas of Expertise
             </motion.h1>
-            <div className="circle">
+            <Link href="#areas" className="circle">
               <img src="/images/services/circle.svg" />
               <img src="/images/services/arrow.svg" />
-            </div>
+            </Link>
           </div>
           <motion.div
             initial="hidden"

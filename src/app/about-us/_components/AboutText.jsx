@@ -7,7 +7,7 @@ const AboutText = () => {
   return (
     <section className="about-text">
       <div className="about-text__container _container">
-        <div className="about-text__body">
+        <div className="about-text__body" style={{ fontFamily: "var(--font-lato)" }}>
           <motion.div
             initial="hidden"
             whileInView="visible"

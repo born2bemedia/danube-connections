@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const CareerValues = () => {
   return (
-    <section className="our-values">
+    <section className="our-values" id="values">
       <div className="_container">
         <div className="our-values__top">
           <motion.h2

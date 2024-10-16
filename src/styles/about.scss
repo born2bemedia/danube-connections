@@ -4,6 +4,10 @@ body {
   background: #050505;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .about-hero {
   padding: rem(190) 0 rem(140) 0;
   //background-image: url(/images/services/heroBack.png);
@@ -114,6 +118,7 @@ body {
         margin-left: -10px;
         position: relative;
         width: fit-content;
+        display: block;
         @media (max-width: rem(992)) {
           //display: none;
           margin-top: rem(24);

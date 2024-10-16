@@ -3,10 +3,12 @@ import React from "react";
 import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServicesHero = () => {
   return (
     <section className="services-hero">
+      <div className="image-back"></div>
       <div className="_container">
         <div
           className="services-hero__body"
@@ -42,10 +44,10 @@ const ServicesHero = () => {
               customers, talent, and investment opportunities to <br />
               help your business expand and succeed globally.
             </motion.p>
-            <div className="circle">
+            <Link href="#services" className="circle">
               <img src="/images/services/circle.svg" />
               <img src="/images/services/arrow.svg" />
-            </div>
+            </Link>
           </div>
           <motion.div
             initial="hidden"

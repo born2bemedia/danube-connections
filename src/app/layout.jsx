@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${dmsans.className} ${lato.className} ${manrope.className}`}>
-        {/* <GoogleAnalytics gaId="" /> */}
+        <GoogleAnalytics gaId="G-K6X4YKHFG5" />
         <PopupsProvider>
           {/* <Preloader /> */}
           <Header />

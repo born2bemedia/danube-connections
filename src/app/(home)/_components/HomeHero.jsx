@@ -54,8 +54,14 @@ const HomeHero = () => {
                             custom={0.3}
                             className="wrapper">
                             <Link href="/services" className="home-hero__link">
-                                Learn More
-                                <ArrowBtn />
+                                <div className="wrapper">
+                                    <span className="text-01">Learn More</span>
+                                    <span className="text-02">Learn More</span>
+                                </div>
+                                <div className="icons">
+                                    <span className="icon-01"><ArrowBtn /></span>
+                                    <span className="icon-02"><ArrowBtn /></span>
+                                </div>
                             </Link>
                         </motion.div>
 

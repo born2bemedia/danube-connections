@@ -3,7 +3,7 @@ import { DM_Sans, Lato, Manrope } from "next/font/google";
 import "@/styles/base.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-/* import Preloader from "@/components/Preloader"; */
+import Preloader from "@/components/Preloader";
 /* import RequestPopup from "@/components/RequestPopup"; */
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { PopupsProvider } from "@/context/PopupsContext";
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body className={`${dmsans.className} ${lato.className} ${manrope.className}`}>
         <GoogleAnalytics gaId="G-K6X4YKHFG5" />
         <PopupsProvider>
-          {/* <Preloader /> */}
+          <Preloader />
           <Header />
           <main className="site">{children}</main>
           <Footer />

@@ -3,6 +3,7 @@ import React from "react";
 import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServicesInnerHero = ({ title, description, backgroundImage, heroImage, classVar, spheres, mobileImage }) => {
   return (
@@ -29,10 +30,10 @@ const ServicesInnerHero = ({ title, description, backgroundImage, heroImage, cla
             >
               {description}
             </motion.p>
-            <div className="circle">
+            <Link href="#solutions" className="circle">
               <img src="/images/services/circle.svg" />
               <img src="/images/services/arrow.svg" />
-            </div>
+            </Link>
           </div>
           <motion.div
             initial="hidden"

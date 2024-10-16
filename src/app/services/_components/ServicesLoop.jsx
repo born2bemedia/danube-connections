@@ -8,7 +8,7 @@ import services from "@/lib/services/services";
 
 const ServicesLoop = () => {
   return (
-    <section className="services-loop">
+    <section className="services-loop" id="services">
       <div className="_container">
         <div
           className="services-loop__body"
@@ -27,12 +27,19 @@ const ServicesLoop = () => {
                 style={{ fontFamily: "var(--font-manrope)" }}
                 dangerouslySetInnerHTML={{ __html: service.title }}
               />
-              <div
-                className="service-details"
-                style={{
-                  backgroundImage: `url(/images/services/${service.pageLink}.png)`,
-                }}
-              >
+              <div className="service-details">
+                <div
+                  className="service-back"
+                  style={{
+                    backgroundImage: `url(/images/services/${service.pageLink}.png)`,
+                  }}
+                ></div>
+                <div
+                  className="service-img"
+                  style={{
+                    backgroundImage: `url(/images/services/${service.pageLink}__img.png)`,
+                  }}
+                ></div>
                 <div className="inner">
                   <img
                     src={`/images/services/${service.id}.svg`}

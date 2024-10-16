@@ -4,6 +4,10 @@ body {
   background: #050505;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .career-hero {
   padding: rem(190) 0 rem(140) 0;
   //background-image: url(/images/services/heroBack.png);
@@ -103,6 +107,7 @@ body {
         margin-left: -10px;
         position: relative;
         width: fit-content;
+        display: block;
         @media (max-width: rem(992)) {
           //display: none;
           margin-top: rem(24);
@@ -377,6 +382,25 @@ body {
     > div {
       width: calc(50% - rem(30));
       position: relative;
+      &.col-01{
+        background-color: #161616;
+        overflow: hidden;
+        img{
+          &:first-child{
+            animation: float 5s ease-in-out infinite;
+            position: absolute;
+            left: 0;
+            top: -10px;
+          }
+          &:last-child{
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 2s;
+            position: absolute;
+            right: 0;
+            bottom: -120px;
+          }
+        }
+      }
       @media (max-width: rem(992)) {
         width: 100%;
         &:first-child {

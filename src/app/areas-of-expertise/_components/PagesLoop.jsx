@@ -8,7 +8,7 @@ import ExploreIcon from "@/icons/ExploreIcon";
 
 const PagesLoop = () => {
   return (
-    <section className="areas-loop">
+    <section className="areas-loop" id="areas">
       <div className="_container">
         <div
           className="areas-loop__body"

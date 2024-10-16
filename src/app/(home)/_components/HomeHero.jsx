@@ -58,10 +58,11 @@ const HomeHero = () => {
                                     <span className="text-01">Learn More</span>
                                     <span className="text-02">Learn More</span>
                                 </div>
-                                <div className="icons">
+                                <ArrowBtn />
+                                {/* <div className="icons">
                                     <span className="icon-01"><ArrowBtn /></span>
                                     <span className="icon-02"><ArrowBtn /></span>
-                                </div>
+                                </div> */}
                             </Link>
                         </motion.div>
 

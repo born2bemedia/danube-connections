@@ -10,27 +10,26 @@ const Header = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [buttonActive, setButtonActive] = useState(false);
 
+  const [hoveredItem, setHoveredItem] = useState(null);
+
   const menuOpen = () => {
     setMenuOpened((prev) => !prev);
     setButtonActive((prev) => !prev);
     document.body.classList.toggle("no-scroll", !menuOpened);
   };
 
-  const toggleSubmenu = (index) => {
-    setSubmenuOpen((prev) => {
-      const isOpen = prev[index];
-      return {
-        services: false,
-        company: false,
-        [index]: !isOpen,
-      };
-    });
-  };
-
   const closeMenu = () => {
     setMenuOpened(false);
     setButtonActive(false);
     document.body.classList.remove("no-scroll");
+  };
+
+  const handleMouseEnter = (index) => {
+    setHoveredItem(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
   };
 
   useEffect(() => {
@@ -69,8 +68,9 @@ const Header = () => {
             <nav className="header__nav _container">
               <ul className="header__list">
                 <li
-                  className={`header__item-menu _submenu ${submenuOpen["services"] ? "_open" : ""}`}
-                  onClick={() => toggleSubmenu("services")}
+                  className={`header__item-menu _submenu ${submenuOpen["services"] || hoveredItem === "services" ? "_open" : ""}`}
+                  onMouseEnter={() => handleMouseEnter("services")}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <div className="wrapper">
                     <Link href="/services" onClick={closeMenu}>Services</Link>
@@ -83,12 +83,12 @@ const Header = () => {
                     </button>
                   </div>
                   <ul
-                    className={`header__submenu ${submenuOpen["services"] ? "_active" : ""}`}
+                    className={`header__submenu ${submenuOpen["services"] || hoveredItem === "services" ? "_active" : ""}`}
                     style={{
-                      maxHeight: submenuOpen["services"] ? "1000px" : "0",
+                      maxHeight: submenuOpen["services"] || hoveredItem === "services" ? "1000px" : "0",
                       overflow: "hidden",
                       transition: "all 0.3s ease 0s",
-                      paddingTop: submenuOpen["services"] ? "10px" : "0",
+                      paddingTop: submenuOpen["services"] || hoveredItem === "services" ? "10px" : "0",
                     }}
                   >
                     <li className="header__subitem">
@@ -108,10 +108,10 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-
                 <li
-                  className={`header__item-menu _submenu ${submenuOpen["company"] ? "_open" : ""}`}
-                  onClick={() => toggleSubmenu("company")}
+                  className={`header__item-menu _submenu ${submenuOpen["company"] || hoveredItem === "company" ? "_open" : ""}`}
+                  onMouseEnter={() => handleMouseEnter("company")}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <div className="wrapper">
                     <Link href="/areas-of-expertise" onClick={closeMenu}>Areas of Expertise</Link>
@@ -124,12 +124,12 @@ const Header = () => {
                     </button>
                   </div>
                   <ul
-                    className={`header__submenu ${submenuOpen["company"] ? "_active" : ""}`}
+                    className={`header__submenu ${submenuOpen["company"] || hoveredItem === "company" ? "_active" : ""}`}
                     style={{
-                      maxHeight: submenuOpen["company"] ? "1000px" : "0",
+                      maxHeight: submenuOpen["company"] || hoveredItem === "company" ? "1000px" : "0",
                       overflow: "hidden",
                       transition: "all 0.3s ease 0s",
-                      paddingTop: submenuOpen["company"] ? "14px" : "0",
+                      paddingTop: submenuOpen["company"] || hoveredItem === "company" ? "14px" : "0",
                     }}
                   >
                     <li className="header__subitem">

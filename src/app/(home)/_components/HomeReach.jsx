@@ -19,22 +19,10 @@ const HomeReach = () => {
                         <Link href="/about-us" className="home-reach__link">Get to Know Us</Link>
                     </div>
                     <div className="home-reach__row-02">
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={fadeInDown}
-                            custom={0.2}
-                            className="img-01">
+                        <div className="img-01">
                             <img src="/images/home/home-reach-01.png" alt="image" />
-                        </motion.div>
-                        <div
-                            /* initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={fadeInUp}
-                            custom={0.3} */
-                            className="img-02">
+                        </div>
+                        <div className="img-02">
                             <img src="/images/home/home-reach-02.png" alt="image" />
                         </div>
                     </div>

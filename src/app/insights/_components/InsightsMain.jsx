@@ -23,6 +23,8 @@ const InsightsMain = () => {
                             </Link>
                         </div>
                         <div className="insights-main__col-02"><img src="/images/insights/insights-poster-01.png" alt="Investment Opportunities for Businesses 2025" /></div>
+                        <img src="/images/insights/insights-poster-back-01.png" alt="image" className="img-01" />
+                        <img src="/images/insights/insights-poster-back-04.png" alt="image" className="img-02" />
                     </article>
 
                     <article className="insights-main__article">
@@ -37,6 +39,8 @@ const InsightsMain = () => {
                             </Link>
                         </div>
                         <div className="insights-main__col-02"><img src="/images/insights/insights-poster-02.png" alt="Supply Chain Optimisation Tools and Technologies 2025" /></div>
+                        <img src="/images/insights/insights-poster-back-02.png" alt="image" className="img-01" />
+                        <img src="/images/insights/insights-poster-back-05.png" alt="image" className="img-02" />
                     </article>
 
                     <article className="insights-main__article">
@@ -51,6 +55,8 @@ const InsightsMain = () => {
                             </Link>
                         </div>
                         <div className="insights-main__col-02"><img src="/images/insights/insights-poster-03.png" alt="State of Business Networking 2024" /></div>
+                        <img src="/images/insights/insights-poster-back-03.png" alt="image" className="img-01" />
+                        <img src="/images/insights/insights-poster-back-06.png" alt="image" className="img-02" />
                     </article>
                 </div>
             </div>

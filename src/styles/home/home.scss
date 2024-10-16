@@ -332,11 +332,12 @@
             height: 100%;
             img {
                 position: absolute;
-                top: 0;
+                top: -30px;
                 left: 0;
                 max-width: 600px;
                 width: 100%;
                 object-fit: cover;
+                animation: bounce-custom 2.5s linear infinite;
             }
         }
 
@@ -345,11 +346,12 @@
             height: 100%;
             img {
                 position: absolute;
-                bottom: 0;
+                bottom: -30px;
                 right: 0;
                 max-width: 470px;
                 width: 100%;
                 object-fit: cover;
+                animation: bounce-custom 3s linear infinite;
             }
         }
     }
@@ -509,8 +511,9 @@
         background-color: #161616;
         border-radius: 16px;
         padding: 30px 25px;
+        position: relative;
 
-        &:nth-child(1) {
+        /* &:nth-child(1) {
             background-image: url("/images/home/home-insights-desc-01.png");
             background-repeat: no-repeat;
             background-size: contain;
@@ -542,10 +545,31 @@
             @media (max-width: 767px) {
                 background-image: url("/images/home/home-insights-mobile-03.png");
             }
-        }
+        } */
 
         @media (max-width: 767px) {
             width: 100%;
+        }
+
+        .img-01 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+            width: 100%;
+            object-fit: contain;
+            transition: all 0.3s ease 0s;
+            z-index: -1;
+
+            @media(max-width: 767px) { 
+                height: 100%;
+            }
+        }
+
+        &:hover  {
+            .img-01 { 
+                opacity: 1;
+            }
         }
     }
 
@@ -658,6 +682,12 @@
 
         &:hover {
             transform: scale(1.1) !important;
+
+            .home-best__image {
+                img {
+                    filter: none;
+                }
+            }
         }
 
         @media (max-width: 992px) {
@@ -679,6 +709,8 @@
         img {
             max-width: 77px;
             object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.3s ease 0s;
 
             @media (max-width: 767px) {
                 max-width: 63px;
@@ -727,17 +759,14 @@
         max-width: 328px;
         width: 100%;
         position: relative;
-        background-image: url("/images/home/home-work-01.png");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center center;
-
         @media (max-width: 992px) {
             width: 100%;
             height: 311px;
             max-width: 100%;
             background-image: url("/images/home/home-work-04.png");
             background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
 
         .title {
@@ -796,7 +825,7 @@
                 position: absolute;
                 bottom: 0 !important;
                 right: 0;
-
+                animation: bounce-custom 3.5s linear infinite;
                 @media (max-width: 992px) {
                     display: none;
                 }
@@ -815,6 +844,15 @@
                 @media (min-width: 992px) {
                     display: none;
                 }
+            }
+
+            .img-03 {
+                width: 100%;
+                height: 405px;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                animation: bounce-custom 3s linear infinite;
             }
         }
     }
@@ -924,7 +962,7 @@
     }
 
     &__title {
-        @include adaptiv-value("font-size", 62, 48, 1);
+        @include adaptiv-value("font-size", 62, 42, 1);
         line-height: normal;
         color: #e6f355;
         text-transform: uppercase;
@@ -939,6 +977,10 @@
         span {
             color: #fff;
             font-size: 32px;
+        }
+
+        @media(max-width: 767px) { 
+            margin: 0;
         }
     }
 
@@ -1060,6 +1102,8 @@
         visibility: hidden;
         position: absolute;
         top: 40px;
+        right: 40px;
+        left: 40px;
         transition: all 0.3s ease 0s;
 
         @media (max-width: 992px) {

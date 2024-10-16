@@ -23,7 +23,7 @@ const ManuHero = () => {
                             <img src="/images/services/circle.svg" alt="circle" />
                             <img src="/images/services/arrow.svg" alt="arrow" />
                         </div>
-                        <div className="area-hero__image">
+                        <div className="area-hero__image _manu">
                             <img src="/images/areas/area-hero-desc-03.png" alt="image" className="img-01" />
                             <img src="/images/areas/area-hero-desc-03.png" alt="image" className="img-02" />
                         </div>

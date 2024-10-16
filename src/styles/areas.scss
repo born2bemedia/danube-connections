@@ -322,9 +322,9 @@ body {
 
   &._manu {
     background-image: url("/images/areas/area-back-04.png");
-    background-position: right center;
+    background-position: 90% center;
     background-repeat: no-repeat;
-    background-size: 550px;
+    background-size: 600px;
     overflow: hidden;
 
     @media (max-width: 767px) {
@@ -412,8 +412,8 @@ body {
     .img-01 {
       position: absolute;
       top: 60px;
-      right: -120px;
-      max-width: 550px;
+      right: -55px;
+      max-width: 650px;
       width: 100%;
       object-fit: cover;
       animation: bounce-custom 3s linear infinite;
@@ -695,7 +695,7 @@ body {
   &__col-01 {
     width: 50%;
     background-color: #e6f355;
-    padding: 24px 17px;
+    padding: 24px 17px 24px 30px;
     display: flex;
     align-items: center;
     gap: 25px;

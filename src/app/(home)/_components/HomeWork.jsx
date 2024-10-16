@@ -114,14 +114,10 @@ const HomeWork = () => {
                                 Explore Our Expertise
                                 <div className="icon"><ArrowBtn /></div>
                             </h3>
-                            <div
-                                /* initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                variants={fadeInUp} */
-                                className="image">
+                            <div className="image">
                                 <img src="/images/home/home-work-02.png" alt="image" className="img-01" />
                                 <img src="/images/home/home-work-03.png" alt="image" className="img-02" />
+                                <img src="/images/home/home-work-01.png" alt="image" className="img-03" />
                             </div>
                         </Link>
                     </div>

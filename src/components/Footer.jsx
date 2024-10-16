@@ -21,7 +21,7 @@ const Footer = () => {
                   <img src="/images/danube-logo.svg" alt="Danube Logo" />
                 </Link>
                 <div className="footer__text">
-                  Connecting Business and <br /> Opportunity
+                  Connecting Business <br /> and Opportunity
                 </div>
                 <ul className="footer__contacts">
                   <li className="footer__contact">

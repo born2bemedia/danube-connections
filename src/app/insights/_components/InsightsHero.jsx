@@ -34,7 +34,10 @@ const InsightsHero = () => {
                             <span>Market</span>
                             Insights and <br /> Research
                         </motion.h1>
-                        <img src={bgImage} alt="insights" className="insights-hero__image" />
+                        <img src="images/insights/insights-img-01.png" alt="image" className="img-05" />
+                        <img src="/images/insights/float-img-01.png" alt="image" className="img-02" />
+                        <img src="/images/insights/float-img-02.png" alt="image" className="img-03" />
+                        <img src="/images/insights/float-img-03.png" alt="image" className="img-04" />
                     </div>
                     <div className="insights-hero__circle">
                         <img src="/images/services/circle.svg" alt="circle" />
@@ -42,6 +45,7 @@ const InsightsHero = () => {
                     </div>
                 </div>
             </div>
+            <img src="/images/insights/insights-back-01.png" alt="image" className="img-01" />
         </section>
     );
 };

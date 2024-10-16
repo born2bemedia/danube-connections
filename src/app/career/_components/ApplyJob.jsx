@@ -14,7 +14,8 @@ const ApplyJob = () => {
           style={{ fontFamily: "var(--font-lato)" }}
         >
           <div className="col-01">
-            <Image src={"/images/career/applyBack.png"} fill />
+            <Image src={"/images/career/apply2.png"} width={492} height={262} />
+            <Image src={"/images/career/apply1.png"} width={460} height={367} />
           </div>
           <div className="col-02">
             <motion.h2

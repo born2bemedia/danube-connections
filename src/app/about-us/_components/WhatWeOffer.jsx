@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const WhatWeOffer = () => {
   return (
-    <section className="what-we-offer">
+    <section className="what-we-offer" id="what-we-offer">
       <div className="_container">
         <div className="what-we-offer__top">
           <motion.h2
@@ -28,6 +28,7 @@ const WhatWeOffer = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
+            style={{ fontFamily: "var(--font-lato)" }}
           >
             Targeted solutions across supply chain optimization, partnership
             development, <br />

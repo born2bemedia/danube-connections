@@ -3,6 +3,7 @@ import React from "react";
 import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const CareerHero = () => {
   return (
@@ -31,10 +32,10 @@ const CareerHero = () => {
               If you're passionate about business growth, innovation, and ready
               for a dynamic career, join our team!
             </motion.p>
-            <div className="circle">
+            <Link href="#values" className="circle">
               <img src="/images/services/circle.svg" />
               <img src="/images/services/arrow.svg" />
-            </div>
+            </Link>
           </div>
           <motion.div
             initial="hidden"

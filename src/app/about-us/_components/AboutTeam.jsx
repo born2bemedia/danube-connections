@@ -7,7 +7,7 @@ import Image from "next/image";
 const AboutTeam = () => {
   return (
     <section className="about-team">
-      <div className="_container">
+      <div className="_container" style={{ fontFamily: "var(--font-lato)" }}>
         <motion.h2
           initial="hidden"
           whileInView="visible"

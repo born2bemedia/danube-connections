@@ -3,6 +3,7 @@ import React from "react";
 import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutHero = () => {
   return (
@@ -32,10 +33,10 @@ const AboutHero = () => {
               Your Business <br />
               Growth
             </motion.h2>
-            <div className="circle">
+            <Link href="#what-we-offer" className="circle">
               <img src="/images/services/circle.svg" />
               <img src="/images/services/arrow.svg" />
-            </div>
+            </Link>
           </div>
           <motion.div
             initial="hidden"

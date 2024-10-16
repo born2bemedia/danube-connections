@@ -13,6 +13,8 @@ const CallToAction = ({ callToAction }) => {
           className="call-to-action__body"
           style={{ fontFamily: "var(--font-lato)" }}
         >
+          <div className="back1"></div>
+          <div className="back2"></div>
           <div>
             <motion.h2
               initial="hidden"

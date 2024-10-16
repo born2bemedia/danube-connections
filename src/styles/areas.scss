@@ -4,6 +4,10 @@ body {
   background: #050505;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .areas-hero {
   padding: rem(220) 0 rem(140) 0;
   background-image: url(/images/areas/heroBack.png);
@@ -42,12 +46,12 @@ body {
         }
         img {
           &:first-child {
-            //margin-top: rem(80);
+            margin-top: -70px;
           }
           &:last-child {
             position: absolute;
             left: -10px;
-            top: 50px;
+            top: 0;
             animation: float 5s ease-in-out infinite;
           }
         }
@@ -71,6 +75,7 @@ body {
         margin-left: -10px;
         position: relative;
         width: fit-content;
+        display: block;
         @media (max-width: rem(992)) {
           //display: none;
           margin-top: rem(24);

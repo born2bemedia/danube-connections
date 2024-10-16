@@ -11,7 +11,7 @@ const SolutionsTabs = ({ services }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="solutions-tabs">
+    <section className="solutions-tabs" id="solutions">
       <div className="_container">
         <motion.div
           initial="hidden"

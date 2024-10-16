@@ -199,6 +199,7 @@ body {
         margin: rem(32) 0;
         @media (max-width: rem(992)) {
           font-size: rem(18);
+          margin: rem(24) 0;
         }
       }
       > span {
@@ -244,7 +245,7 @@ body {
           }
         }
         iframe {
-            width: 100%;
+          width: 100%;
           @media (max-width: rem(992)) {
             height: rem(160);
           }
@@ -315,8 +316,7 @@ body {
           }
         }
       }
-      p{
-
+      p {
       }
       a {
         color: #f3f3f3;
